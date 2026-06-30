@@ -146,3 +146,46 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+
+// int main () {
+
+//     int arr[] = { 4, 2, 0, 6, 3, 2, 5};
+
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     int trappedWater = 0;
+
+//     int leftMax[n];
+//     int rightMax[n];
+
+//     leftMax[0] = arr[0];
+//     rightMax[n-1] = arr[n-1];
+
+//     for(int i = 1; i < n; i++) {
+
+//         leftMax[i] = max(leftMax[i-1], arr[i ]);
+//     }
+
+//     for(int i = n-2; i >= 0; i--) {
+//         rightMax[i] = max(rightMax[i+1], arr[i]);
+//     }
+
+    
+
+//     for(int i = 0; i < n; i++) {
+        
+//         int minMax = min(leftMax[i], rightMax[i]);
+
+//         trappedWater += minMax - arr[i];
+
+//     }
+
+//     cout << "Trapped Water is " << trappedWater << endl;
+
+
+//     return 0;
+// }
