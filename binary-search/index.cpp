@@ -124,3 +124,76 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+// using namespace std;
+
+// bool checkIsValid(int arr[], int k, int max_allocatedPages, int n) {
+
+//     int stu = 1;
+//     int pages = 0;
+
+//     for(int i = 0; i < n; i++) {
+
+//         if(arr[i] > max_allocatedPages) {
+//             return false;
+//         } 
+
+//         if(arr[i] + pages <= max_allocatedPages) {
+//            pages += arr[i]; 
+//         }
+
+//         else {
+//             stu++;
+//             pages = arr[i];
+//         }
+
+       
+//     }
+//     return stu > k ? false : true;
+
+
+// }
+
+
+// int main () {
+
+//     int arr[] = {2, 1, 3, 4};
+//     int k = 2;
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     int sum = 0;
+//     int ans = -1;
+
+//     for(int i = 0; i < n; i++ ) {
+//         sum += arr[i];
+//     }
+
+//     int st = 0;
+//     int end = sum;
+
+//     while (st <= end)
+//     {
+//         /* code */
+//         int mid = st + ( end - st ) / 2;
+//         bool isValid = checkIsValid(arr, k, mid, n);
+
+//         if(isValid) {
+
+//             ans = mid;
+//             end = mid - 1;
+
+//         }
+
+//         else {
+
+//             st = mid + 1;
+
+//         }
+
+//     }
+    
+//     cout << "You Allocate Max Page Per Studend is " << ans << endl;
+    
+
+//     return 0;
+// }
