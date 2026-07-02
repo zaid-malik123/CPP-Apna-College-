@@ -36,11 +36,9 @@
 //     }
 
 //     cout << "Peak Element is " << peakElement << endl;
-    
 
 //     return 0;
 // }
-
 
 // minimum value in rotated array;
 
@@ -63,7 +61,6 @@
 
 //         int mid = st + ( end - st ) / 2;
 
-
 //         if(arr[mid] >= arr[0]) {
 
 //             // left sorted
@@ -82,7 +79,6 @@
 //     }
 
 //     cout << "MIN ELEMENT IS " << ans << endl;
-    
 
 //     return 0;
 // }
@@ -120,7 +116,6 @@
 //     }
 
 //     cout << "Missing +ve Int no is " << ans + k;
-    
 
 //     return 0;
 // }
@@ -137,10 +132,10 @@
 
 //         if(arr[i] > max_allocatedPages) {
 //             return false;
-//         } 
+//         }
 
 //         if(arr[i] + pages <= max_allocatedPages) {
-//            pages += arr[i]; 
+//            pages += arr[i];
 //         }
 
 //         else {
@@ -148,13 +143,10 @@
 //             pages = arr[i];
 //         }
 
-       
 //     }
 //     return stu > k ? false : true;
 
-
 // }
-
 
 // int main () {
 
@@ -191,9 +183,91 @@
 //         }
 
 //     }
-    
+
 //     cout << "You Allocate Max Page Per Studend is " << ans << endl;
-    
+
+//     return 0;
+// }
+
+// painter partition problem;
+
+// #include <iostream>
+// #include <climits>
+
+// using namespace std;
+
+// bool isPainted(int arr[], int k, int n, int length)
+// {
+
+//     int painter = 1;
+//     int wall = 0;
+
+//     for(int i = 0; i < n; i++) {
+
+//         if(arr[i] > length) {
+//             return false;
+//         }
+
+//         if(arr[i] + wall <= length) {
+//             wall += arr[i];
+//         }
+
+//         else {
+//             painter++;
+//             wall = arr[i];
+//         }
+//     }
+
+//     return painter <= k;
+// }
+
+// int main()
+// {
+
+//     int arr[] = {5, 10, 30, 20, 15};
+
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     int k = 3;
+//     int ans = 0;
+
+//     int st = INT_MIN;
+//     int end = 0;
+
+//     for (int i = 0; i < n; i++)
+//     {
+
+//         if (arr[i] > st)
+//         {
+//             st = arr[i];
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         end += arr[i];
+//     }
+
+//     while (st <= end)
+//     {
+//         /* code */
+//         int mid = st + (end - st) / 2;
+
+//         bool isPaint = isPainted(arr, k, n, mid);
+
+//         if (isPaint)
+//         {
+//             ans = mid;
+//             end = mid - 1;
+//         }
+
+//         else
+//         {
+//             st = mid + 1;
+//         }
+//     }
+
+//     cout << "Your ans is " << ans << endl;
 
 //     return 0;
 // }
