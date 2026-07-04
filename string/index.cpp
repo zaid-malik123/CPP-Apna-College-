@@ -51,3 +51,45 @@
 
 //     return 0;
 // }
+
+
+// efficient approach sliding window;
+
+#include<iostream>
+
+using namespace std;
+
+int main () {
+
+    vector<bool> count(256, 0);
+    string s = "abac";
+    int len = 0;
+
+    int first = 0;
+
+    int second = 0;
+
+    while (second < s.size())
+    {
+        /* code */
+
+        while (count[s[second]])
+        {
+            /* code */
+
+            count[s[first]] = 0;
+            first++;
+
+        }
+
+        count[s[second]] = 1;
+
+        len = max(len, second - first + 1);
+        second++;
+        
+    }
+
+    cout << "Lenght is " << len << endl;
+    
+    return 0;
+}
