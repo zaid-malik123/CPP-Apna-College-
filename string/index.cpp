@@ -6,7 +6,6 @@
 
 // using namespace std;
 
-
 // int main () {
 
 //     string s = "abac";
@@ -31,7 +30,7 @@
 //                 else {
 //                     freq[s[k]]++;
 //                 }
-                
+
 //             }
 
 //             if(isValid) {
@@ -41,55 +40,207 @@
 //             cout << endl;
 //         }
 
-        
 //         cout << endl;
-        
+
 //     }
 
 //     cout << "Max lenght is " << maxLength << endl;
 
+//     return 0;
+// }
+
+// efficient approach sliding window;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     vector<bool> count(256, 0);
+//     string s = "abac";
+//     int len = 0;
+
+//     int first = 0;
+
+//     int second = 0;
+
+//     while (second < s.size())
+//     {
+//         /* code */
+
+//         while (count[s[second]])
+//         {
+//             /* code */
+
+//             count[s[first]] = 0;
+//             first++;
+
+//         }
+
+//         count[s[second]] = 1;
+
+//         len = max(len, second - first + 1);
+//         second++;
+
+//     }
+
+//     cout << "Lenght is " << len << endl;
 
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <vector>
+// #include <climits>
 
-// efficient approach sliding window;
+// using namespace std;
 
-#include<iostream>
+// int main()
+// {
+//     string s = "AABBBCBBAC";
 
-using namespace std;
+//     int n = s.size();
 
-int main () {
+//     int diff = 0;
+//     int len = INT_MAX;
 
-    vector<bool> count(256, 0);
-    string s = "abac";
-    int len = 0;
+//     int first = 0;
+//     int second = 0;
 
-    int first = 0;
+//     vector<int> count(256, 0);
 
-    int second = 0;
+//     // Count total distinct characters
+//     while (first < n)
+//     {
+//         if (count[s[first]] == 0)
+//             diff++;
 
-    while (second < s.size())
-    {
-        /* code */
+//         count[s[first]]++;
 
-        while (count[s[second]])
-        {
-            /* code */
+//         first++;
+//     }
 
-            count[s[first]] = 0;
-            first++;
+//     // Reset frequency array
+//     for (int i = 0; i < 256; i++)
+//         count[i] = 0;
 
-        }
+//     first = 0;
 
-        count[s[second]] = 1;
+//     // Sliding Window
+//     while (second < n)
+//     {
+//         // Expand window until it becomes valid
+//         while (diff > 0 && second < n)
+//         {
+//             if (count[s[second]] == 0)
+//                 diff--;
 
-        len = max(len, second - first + 1);
-        second++;
-        
-    }
+//             count[s[second]]++;
 
-    cout << "Lenght is " << len << endl;
-    
-    return 0;
-}
+//             second++;
+//         }
+
+//         // Shrink window while it is still valid
+//         while (diff == 0)
+//         {
+//             len = min(len, second - first);
+
+//             count[s[first]]--;
+
+//             if (count[s[first]] == 0)
+//                 diff++;
+
+//             first++;
+//         }
+//     }
+
+//     cout << "Smallest length is : " << len << endl;
+
+//     return 0;
+// }
+
+// string prefix;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     string s = "AACAA";
+
+//     int n = s.size();
+
+//     int ans = 0;
+
+//     for(int i = 1; i < n-1; i++) {
+
+//         string prefix = "";
+//         string suffix = "";
+
+//         for(int j = 0; j < i; j++) {
+
+//             prefix += s[j];
+//         }
+
+//         for(int k = n-i; k < n; k++) {
+
+//             suffix += s[k];
+
+//         }
+
+//         if(prefix == suffix) {
+//             ans = prefix.size();
+//         }
+
+//     }
+
+//     return 0;
+// }
+
+// calculate lps;
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+
+//     string s = "ABCABDABCABCABD";
+
+//     int n = s.size();
+
+//     vector<int> lps(n, 0);
+
+//     int prefix = 0;
+
+//     int suffix = 1;
+
+//     while (suffix < n)
+//     {
+//         /* code */
+
+//         if (s[prefix] == s[suffix])
+//         {
+//             lps[suffix] = prefix + 1;
+//             prefix++;
+//             suffix++;
+//         }
+
+//         else {
+
+//             if(prefix == 0) {
+//                 lps[suffix] = 0;
+//                 suffix++;
+//             }
+
+//             else {
+//                 prefix = lps[prefix - 1];
+//             }
+//         }
+//     }
+
+//     cout <<  "Max Lps is "  << lps[n-1] << endl;
+// }
