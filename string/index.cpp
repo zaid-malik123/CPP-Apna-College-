@@ -319,3 +319,55 @@
 //         }
 //     }
 // };
+
+#include<iostream>
+
+using namespace std;
+
+int main () {
+
+    string s = "aaaotcaakr";
+
+    string rev = s;
+
+    s += '$';
+
+    reverse(rev.begin(), rev.end());
+
+    s += rev;
+
+    vector<int> lps(s.size(), 0);
+
+    int len = 0;
+
+    int i = 1;
+
+    while (i < s.size())
+    {
+        /* code */
+
+        if(s[i] == s[len]) {
+            len++;
+            lps[i] = len;
+            i++;
+        }
+
+        else {
+            if(len == 0) {
+                lps[i] = 0;
+                i++;
+            }
+
+            else {
+                len = lps[len - 1];
+            }
+        }
+    }
+    
+    int sLps = lps[lps.size() - 1];
+
+    cout << "Your ans is " << rev.size() - sLps;
+
+    
+    return 0;
+}
