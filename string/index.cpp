@@ -1,373 +1,458 @@
-// // longest substring without repeating char;
+// // // longest substring without repeating char;
 
-// // brute force time complexity = o(n^3) space complexity = o(1)
+// // // brute force time complexity = o(n^3) space complexity = o(1)
 
-// // #include<iostream>
+// // // #include<iostream>
 
-// // using namespace std;
+// // // using namespace std;
 
-// // int main () {
+// // // int main () {
 
-// //     string s = "abac";
+// // //     string s = "abac";
 
-// //     int n = s.length();
-// //     int maxLength = 0;
+// // //     int n = s.length();
+// // //     int maxLength = 0;
 
-// //     for(int i = 0; i < n; i++ ) {
+// // //     for(int i = 0; i < n; i++ ) {
 
-// //         for(int j = i; j < n; j++) {
+// // //         for(int j = i; j < n; j++) {
 
-// //             int freq[256] = {0};
-// //             bool isValid = true;
+// // //             int freq[256] = {0};
+// // //             bool isValid = true;
 
-// //             for(int k = i; k <= j; k++) {
+// // //             for(int k = i; k <= j; k++) {
 
-// //                 if(freq[s[k]] == 1) {
-// //                     isValid = false;
-// //                     break;
-// //                 }
+// // //                 if(freq[s[k]] == 1) {
+// // //                     isValid = false;
+// // //                     break;
+// // //                 }
 
-// //                 else {
-// //                     freq[s[k]]++;
-// //                 }
+// // //                 else {
+// // //                     freq[s[k]]++;
+// // //                 }
 
-// //             }
+// // //             }
 
-// //             if(isValid) {
-// //                 maxLength = max(maxLength, j - i + 1);
-// //             }
+// // //             if(isValid) {
+// // //                 maxLength = max(maxLength, j - i + 1);
+// // //             }
 
-// //             cout << endl;
-// //         }
+// // //             cout << endl;
+// // //         }
 
-// //         cout << endl;
+// // //         cout << endl;
 
-// //     }
+// // //     }
 
-// //     cout << "Max lenght is " << maxLength << endl;
+// // //     cout << "Max lenght is " << maxLength << endl;
 
-// //     return 0;
-// // }
+// // //     return 0;
+// // // }
 
-// // efficient approach sliding window;
+// // // efficient approach sliding window;
 
-// // #include<iostream>
+// // // #include<iostream>
 
-// // using namespace std;
+// // // using namespace std;
 
-// // int main () {
+// // // int main () {
 
-// //     vector<bool> count(256, 0);
-// //     string s = "abac";
-// //     int len = 0;
+// // //     vector<bool> count(256, 0);
+// // //     string s = "abac";
+// // //     int len = 0;
 
-// //     int first = 0;
+// // //     int first = 0;
 
-// //     int second = 0;
+// // //     int second = 0;
 
-// //     while (second < s.size())
-// //     {
-// //         /* code */
+// // //     while (second < s.size())
+// // //     {
+// // //         /* code */
 
-// //         while (count[s[second]])
-// //         {
-// //             /* code */
+// // //         while (count[s[second]])
+// // //         {
+// // //             /* code */
 
-// //             count[s[first]] = 0;
-// //             first++;
+// // //             count[s[first]] = 0;
+// // //             first++;
 
-// //         }
+// // //         }
 
-// //         count[s[second]] = 1;
+// // //         count[s[second]] = 1;
 
-// //         len = max(len, second - first + 1);
-// //         second++;
+// // //         len = max(len, second - first + 1);
+// // //         second++;
 
-// //     }
+// // //     }
 
-// //     cout << "Lenght is " << len << endl;
+// // //     cout << "Lenght is " << len << endl;
 
-// //     return 0;
-// // }
+// // //     return 0;
+// // // }
 
-// // #include <iostream>
-// // #include <vector>
-// // #include <climits>
+// // // #include <iostream>
+// // // #include <vector>
+// // // #include <climits>
 
-// // using namespace std;
+// // // using namespace std;
 
-// // int main()
-// // {
-// //     string s = "AABBBCBBAC";
+// // // int main()
+// // // {
+// // //     string s = "AABBBCBBAC";
 
-// //     int n = s.size();
+// // //     int n = s.size();
 
-// //     int diff = 0;
-// //     int len = INT_MAX;
+// // //     int diff = 0;
+// // //     int len = INT_MAX;
 
-// //     int first = 0;
-// //     int second = 0;
+// // //     int first = 0;
+// // //     int second = 0;
 
-// //     vector<int> count(256, 0);
+// // //     vector<int> count(256, 0);
 
-// //     // Count total distinct characters
-// //     while (first < n)
-// //     {
-// //         if (count[s[first]] == 0)
-// //             diff++;
+// // //     // Count total distinct characters
+// // //     while (first < n)
+// // //     {
+// // //         if (count[s[first]] == 0)
+// // //             diff++;
 
-// //         count[s[first]]++;
+// // //         count[s[first]]++;
 
-// //         first++;
-// //     }
+// // //         first++;
+// // //     }
 
-// //     // Reset frequency array
-// //     for (int i = 0; i < 256; i++)
-// //         count[i] = 0;
+// // //     // Reset frequency array
+// // //     for (int i = 0; i < 256; i++)
+// // //         count[i] = 0;
 
-// //     first = 0;
+// // //     first = 0;
 
-// //     // Sliding Window
-// //     while (second < n)
-// //     {
-// //         // Expand window until it becomes valid
-// //         while (diff > 0 && second < n)
-// //         {
-// //             if (count[s[second]] == 0)
-// //                 diff--;
+// // //     // Sliding Window
+// // //     while (second < n)
+// // //     {
+// // //         // Expand window until it becomes valid
+// // //         while (diff > 0 && second < n)
+// // //         {
+// // //             if (count[s[second]] == 0)
+// // //                 diff--;
 
-// //             count[s[second]]++;
+// // //             count[s[second]]++;
 
-// //             second++;
-// //         }
+// // //             second++;
+// // //         }
 
-// //         // Shrink window while it is still valid
-// //         while (diff == 0)
-// //         {
-// //             len = min(len, second - first);
+// // //         // Shrink window while it is still valid
+// // //         while (diff == 0)
+// // //         {
+// // //             len = min(len, second - first);
 
-// //             count[s[first]]--;
+// // //             count[s[first]]--;
 
-// //             if (count[s[first]] == 0)
-// //                 diff++;
+// // //             if (count[s[first]] == 0)
+// // //                 diff++;
 
-// //             first++;
-// //         }
-// //     }
+// // //             first++;
+// // //         }
+// // //     }
 
-// //     cout << "Smallest length is : " << len << endl;
+// // //     cout << "Smallest length is : " << len << endl;
 
-// //     return 0;
-// // }
+// // //     return 0;
+// // // }
 
-// // string prefix;
+// // // string prefix;
 
-// // #include<iostream>
+// // // #include<iostream>
 
-// // using namespace std;
+// // // using namespace std;
 
-// // int main () {
+// // // int main () {
 
-// //     string s = "AACAA";
+// // //     string s = "AACAA";
 
-// //     int n = s.size();
+// // //     int n = s.size();
 
-// //     int ans = 0;
+// // //     int ans = 0;
 
-// //     for(int i = 1; i < n-1; i++) {
+// // //     for(int i = 1; i < n-1; i++) {
 
-// //         string prefix = "";
-// //         string suffix = "";
+// // //         string prefix = "";
+// // //         string suffix = "";
 
-// //         for(int j = 0; j < i; j++) {
+// // //         for(int j = 0; j < i; j++) {
 
-// //             prefix += s[j];
-// //         }
+// // //             prefix += s[j];
+// // //         }
 
-// //         for(int k = n-i; k < n; k++) {
+// // //         for(int k = n-i; k < n; k++) {
 
-// //             suffix += s[k];
+// // //             suffix += s[k];
 
-// //         }
+// // //         }
 
-// //         if(prefix == suffix) {
-// //             ans = prefix.size();
-// //         }
+// // //         if(prefix == suffix) {
+// // //             ans = prefix.size();
+// // //         }
 
-// //     }
+// // //     }
 
-// //     return 0;
-// // }
+// // //     return 0;
+// // // }
 
-// // calculate lps;
+// // // calculate lps;
 
-// // #include <iostream>
+// // // #include <iostream>
 
-// // using namespace std;
+// // // using namespace std;
 
-// // int main()
-// // {
+// // // int main()
+// // // {
 
-// //     string s = "ABCABDABCABCABD";
+// // //     string s = "ABCABDABCABCABD";
 
-// //     int n = s.size();
+// // //     int n = s.size();
 
-// //     vector<int> lps(n, 0);
+// // //     vector<int> lps(n, 0);
 
-// //     int prefix = 0;
+// // //     int prefix = 0;
 
-// //     int suffix = 1;
+// // //     int suffix = 1;
 
-// //     while (suffix < n)
-// //     {
-// //         /* code */
+// // //     while (suffix < n)
+// // //     {
+// // //         /* code */
 
-// //         if (s[prefix] == s[suffix])
-// //         {
-// //             lps[suffix] = prefix + 1;
-// //             prefix++;
-// //             suffix++;
-// //         }
+// // //         if (s[prefix] == s[suffix])
+// // //         {
+// // //             lps[suffix] = prefix + 1;
+// // //             prefix++;
+// // //             suffix++;
+// // //         }
 
-// //         else {
+// // //         else {
 
-// //             if(prefix == 0) {
-// //                 lps[suffix] = 0;
+// // //             if(prefix == 0) {
+// // //                 lps[suffix] = 0;
+// // //                 suffix++;
+// // //             }
+
+// // //             else {
+// // //                 prefix = lps[prefix - 1];
+// // //             }
+// // //         }
+// // //     }
+
+// // //     cout <<  "Max Lps is "  << lps[n-1] << endl;
+// // // }
+
+// // class Solution {
+// // public:
+// //     int strStr(string haystack, string needle) {
+
+// //         if (needle.size() == 0)
+// //             return 0;
+
+// //         vector<int> lps(needle.size(), 0);
+
+// //         int prefix = 0;
+// //         int suffix = 1;
+
+// //         // Build LPS Array
+// //         while (suffix < needle.size()) {
+
+// //             if (needle[prefix] == needle[suffix]) {
+
+// //                 prefix++;
+// //                 lps[suffix] = prefix;
 // //                 suffix++;
 // //             }
 
 // //             else {
-// //                 prefix = lps[prefix - 1];
+
+// //                 if (prefix == 0) {
+
+// //                     lps[suffix] = 0;
+// //                     suffix++;
+// //                 }
+
+// //                 else {
+
+// //                     prefix = lps[prefix - 1];
+// //                 }
+// //             }
+// //         }
+
+// //         int first = 0;
+// //         int second = 0;
+
+// //         // Search
+// //         while (first < haystack.size() && second < needle.size()) {
+
+// //             if (haystack[first] == needle[second]) {
+
+// //                 first++;
+// //                 second++;
+// //             }
+
+// //             else {
+
+// //                 if (second == 0) {
+
+// //                     first++;
+// //                 }
+
+// //                 else {
+
+// //                     second = lps[second - 1];
+// //                 }
+// //             }
+// //         }
+
+// //         if (second == needle.size()) {
+
+// //             return first - second;
+// //         }
+
+// //         else {
+
+// //             return -1;
+// //         }
+// //     }
+// // };
+
+// // #include<iostream>
+
+// // using namespace std;
+
+// // int main () {
+
+// //     string s = "aaaotcaakr";
+
+// //     string rev = s;
+
+// //     s += '$';
+
+// //     reverse(rev.begin(), rev.end());
+
+// //     s += rev;
+
+// //     vector<int> lps(s.size(), 0);
+
+// //     int len = 0;
+
+// //     int i = 1;
+
+// //     while (i < s.size())
+// //     {
+// //         /* code */
+
+// //         if(s[i] == s[len]) {
+// //             len++;
+// //             lps[i] = len;
+// //             i++;
+// //         }
+
+// //         else {
+// //             if(len == 0) {
+// //                 lps[i] = 0;
+// //                 i++;
+// //             }
+
+// //             else {
+// //                 len = lps[len - 1];
 // //             }
 // //         }
 // //     }
 
-// //     cout <<  "Max Lps is "  << lps[n-1] << endl;
+// //     int sLps = lps[lps.size() - 1];
+
+// //     cout << "Your ans is " << rev.size() - sLps;
+
+// //     return 0;
 // // }
 
-// class Solution {
-// public:
-//     int strStr(string haystack, string needle) {
+// // circular pattern matching;
 
-//         if (needle.size() == 0)
-//             return 0;
+// #include <iostream>
 
-//         vector<int> lps(needle.size(), 0);
+// using namespace std;
 
-//         int prefix = 0;
-//         int suffix = 1;
+// int main()
+// {
 
-//         // Build LPS Array
-//         while (suffix < needle.size()) {
+//     string s = "cdeabroab";
+//     string pattern = "abcde";
+//     int size = s.size();
 
-//             if (needle[prefix] == needle[suffix]) {
+//     string copy = s;
 
-//                 prefix++;
-//                 lps[suffix] = prefix;
-//                 suffix++;
-//             }
+//     s += copy;
 
-//             else {
+//     vector<int> lps(pattern.size(), 0);
 
-//                 if (prefix == 0) {
+//     int len = 0;
 
-//                     lps[suffix] = 0;
-//                     suffix++;
-//                 }
+//     int i = 1;
 
-//                 else {
+//     while (i < pattern.size())
+//     {
+//         /* code */
 
-//                     prefix = lps[prefix - 1];
-//                 }
-//             }
+//         if (pattern[i] == pattern[len])
+//         {
+//             len++;
+//             lps[i] = len;
+//             i++;
 //         }
 
-//         int first = 0;
-//         int second = 0;
-
-//         // Search
-//         while (first < haystack.size() && second < needle.size()) {
-
-//             if (haystack[first] == needle[second]) {
-
-//                 first++;
-//                 second++;
+//         else
+//         {
+//             if (len == 0)
+//             {
+//                 lps[i] = 0;
+//                 i++;
 //             }
-
-//             else {
-
-//                 if (second == 0) {
-
-//                     first++;
-//                 }
-
-//                 else {
-
-//                     second = lps[second - 1];
-//                 }
+//             else
+//             {
+//                 len = lps[len - 1];
 //             }
-//         }
-
-//         if (second == needle.size()) {
-
-//             return first - second;
-//         }
-
-//         else {
-
-//             return -1;
 //         }
 //     }
-// };
 
-#include<iostream>
+//     int first = 0;
+//     int second = 0;
 
-using namespace std;
+//     while (first < s.size())
+//     {
+//         /* code */
 
-int main () {
+//         if (s[first] == pattern[second])
+//         {
+//             first++;
+//             second++;
+//         }
 
-    string s = "aaaotcaakr";
+//         else
+//         {
 
-    string rev = s;
+//             if (second == 0)
+//             {
+//                 first++;
+//             }
+//             else
+//             {
+//                 second = lps[second - 1];
+//             }
+//         }
 
-    s += '$';
+//         if (second == pattern.size())
+//         {
+//             cout << "Pattern found at index: " << (first - second) << endl;
+//             return 0; 
+//         }
+//     }
 
-    reverse(rev.begin(), rev.end());
+//     cout << "Pattern not found " << endl;
 
-    s += rev;
-
-    vector<int> lps(s.size(), 0);
-
-    int len = 0;
-
-    int i = 1;
-
-    while (i < s.size())
-    {
-        /* code */
-
-        if(s[i] == s[len]) {
-            len++;
-            lps[i] = len;
-            i++;
-        }
-
-        else {
-            if(len == 0) {
-                lps[i] = 0;
-                i++;
-            }
-
-            else {
-                len = lps[len - 1];
-            }
-        }
-    }
-    
-    int sLps = lps[lps.size() - 1];
-
-    cout << "Your ans is " << rev.size() - sLps;
-
-    
-    return 0;
-}
+//     return 0;
+// }
