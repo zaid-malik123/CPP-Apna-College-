@@ -448,11 +448,99 @@
 //         if (second == pattern.size())
 //         {
 //             cout << "Pattern found at index: " << (first - second) << endl;
-//             return 0; 
+//             return 0;
 //         }
 //     }
 
 //     cout << "Pattern not found " << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+//     string s1 = "abc";
+//     string s2 = "bcabcab";
+
+//     while (s2.size() >= s1.size())
+//     {
+//         /* code */
+
+//         s1 += s1;
+//     }
+
+//     vector<int> lps(s2.size(), 0);
+
+//     int len = 0;
+//     int i = 1;
+
+//     while (i < s2.size())
+//     {
+//         /* code */
+
+//         if (s2[i] == s2[len])
+//         {
+//             len++;
+//             lps[i] = len;
+//             i++;
+//         }
+
+//         else
+//         {
+
+//             if (len == 0)
+//             {
+//                 lps[i] = 0;
+//                 i++;
+//             }
+
+//             else
+//             {
+//                 len = lps[len - 1];
+//             }
+//         }
+//     }
+
+//     int start = 0;
+//     int end = 0;
+
+//     while (s1.size() > start)
+//     {
+//         /* code */
+
+//         if (s1[start] == s2[end])
+//         {
+//             start++;
+//             end++;
+//         }
+
+//         else
+//         {
+
+//             if (end == 0)
+//             {
+//                 start++;
+//             }
+
+//             else
+//             {
+//                 end = lps[end - 1];
+//             }
+//         }
+//     }
+
+//     if (end == s2.size())
+//     {
+//         cout << "Exist";
+//     }
+//     else
+//     {
+//         cout << "Not exist" << endl;
+//     }
 
 //     return 0;
 // }
