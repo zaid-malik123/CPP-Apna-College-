@@ -113,3 +113,51 @@
 //     cout << "sum  = " << sum << endl;
 //     return 0;
 // }
+
+// search in 2d array;
+
+// #include<iostream>
+
+// using namespace std;
+
+
+// int main () {
+
+//     int arr[4][4] = {
+//         {1, 2, 3, 4},
+//         {5, 6, 7, 8},
+//         {9, 10, 11, 12},
+//         {13, 14, 15, 16}
+//     };
+
+//     int n = 4;
+//     int m = 4; 
+//     int key = 11;
+
+//     int i = 0;
+//     int j = m-1;
+
+//     int cell = arr[0][m-1];
+
+//     while (i < n && j >= 0 )
+//     {
+//         /* code */
+
+//         if(arr[i][j] == key) {
+//             cout << "found the value at idx ( " << i << "," << j <<" )";
+//             break;
+//         }
+
+//         else if(arr[i][j] < key) {
+//             i++;
+//         }
+
+//         else {
+//             j--;
+//         }
+//     }
+
+//     cout << "Not found" << endl;
+
+//     return 0;
+// }
