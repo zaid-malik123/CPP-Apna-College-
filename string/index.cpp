@@ -656,3 +656,43 @@
 
 //     return 0;
 // }
+
+// valid anagram or not;
+
+// #include<iostream>
+// #include<string>
+
+// using namespace std;
+
+// int main () {
+
+//     string str1 = "anagram";
+//     string str2 = "nagaram";
+
+//     if(str1.size() < str2.size()) {
+//         cout << "This is not valid anagram" << endl;
+//     }
+    
+//     vector<int> freq(256, 0);
+
+//     for(int i = 0; i < str1.size(); i++) {
+
+//         freq[str1[i]]++;
+
+//     }
+
+//     for(int i = 0; i < str2.size(); i++) {
+
+//             if(freq[str2[i]] > 0) {
+//                 freq[str2[i]]--;
+//             }
+
+//             else {
+//                 cout << "This is not valid anagram" << endl;
+//                 return;
+//             }
+
+//     }
+
+//     cout << "This string is valid anagram" << endl;
+// }
