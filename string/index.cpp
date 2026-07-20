@@ -544,3 +544,115 @@
 
 //     return 0;
 // }
+
+
+// conver lower to uppar;
+
+// #include<iostream>
+
+// void toUppar(char ch[], int n) {
+
+//     for(int i = 0; i < n; i++) {
+//         if(ch[i] >= 'a' && ch[i] <= 'z') {
+//             continue;
+//         }
+
+//         else {
+//             ch[i] = ch[i] - 'A' + 'a';
+//         }
+//     }
+
+// }
+
+// using namespace std;
+
+// int main () {
+
+//     char ch[] = "aPple";
+
+//     int n = strlen(ch);
+
+//     toUppar(ch, n);
+//     cout << ch << endl;
+
+//     return 0;
+// }
+
+// reverse a char array;
+
+// #include<iostream>
+// using namespace std;
+// void reverseArray(char ch[], int n) {
+
+//     int start = 0;
+//     int end = n-1;
+
+//     while (start < end)
+//     {
+//         /* code */
+
+//         swap(ch[start], ch[end]);
+//         start++;
+//         end--;
+        
+//     }
+    
+
+// }
+
+
+
+// int main () {
+
+//     char ch[] = "zaid";
+
+//     int n = strlen(ch);
+
+//     reverseArray(ch, n);
+
+//     cout << "Reverse String is " << ch << endl;
+
+//     return 0;
+// }
+
+// check the string is palindrome or not;
+
+// #include<iostream>
+
+// using namespace std;
+
+// bool checkPalindromeOrNot(char ch[], int n) {
+//     int start = 0;
+//     int end = n-1;
+//     bool isPalindrome = true;
+
+//     while (start < end)
+//     {
+//         /* code */
+
+//         if(ch[start] == ch[end]) {
+//             start++;
+//             end--;
+//         }
+
+//         else {
+//             isPalindrome = false;
+//         }
+//     }
+
+//     return isPalindrome;
+    
+// }
+
+// int main() {
+
+//     char ch[] = "zaid";
+
+//     int n = strlen(ch);
+
+//     bool isPalindrome = checkPalindromeOrNot(ch, n);
+
+//     cout << isPalindrome << endl;
+
+//     return 0;
+// }
