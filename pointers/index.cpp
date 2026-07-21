@@ -89,3 +89,63 @@
 
 //     return 0;
 // }
+
+// lecture 3 pointers;
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main() {
+
+//     char ch[] = "abcd";
+
+//     cout << ch << endl;   // Prints: abcd not print the pointer;
+
+//     char *ptr = ch;
+
+//     cout << ptr << endl;  // Prints: abcd same as;
+
+//     // if we print the pointer so as
+
+//     // cout << (void*) ch << endl;
+//     // cout << (void*) ptr << endl;
+
+//     // traverse the pointers;
+
+//     // for(int i = 0; i < strlen(ch); i++ ) {
+//     //     cout << (void*) (ptr + i) << endl;
+//     // }
+
+//     // for(int i = 0; i < strlen(ch); i++) {
+//     //     cout << static_cast<void*>(ptr + i) << endl;
+//     // }
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void swapTheValue(int *val1, int *val2) {
+
+//     int temp = *val2;
+
+//     *val2 = *val1;
+//     *val1 = temp;
+
+// }
+
+// int main () {
+
+//     int first = 10;
+//     int second = 20;
+
+//     swapTheValue(&first, &second);
+
+//     cout << first << " " << second << endl;
+
+//     return 0;
+// }
