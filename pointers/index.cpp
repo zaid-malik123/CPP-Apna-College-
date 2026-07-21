@@ -149,3 +149,72 @@
 
 //     return 0;
 // }
+
+#include<iostream>
+
+using namespace std;
+
+// void swapping(int &num1, int &num2) {
+
+// int temp = num2;
+
+// num2 = num1;
+
+// num1 = temp;
+
+// }
+
+// void plusOne(vector<int> *v1) {
+//     for(int i = 0; i < (*v1).size(); i++) {
+//         (*v1)[i] = 1;
+//     }
+// }
+
+// void plusOne(vector<int> &v) {
+//     for(int i = 0; i < v.size(); i++) {
+//         v[i] = 1;
+//     }
+// }
+
+// void plusOne(int arr[]) {
+
+//     for(int i = 0; i < 5; i++) {
+//         arr[i] = 1;
+//     }
+
+// }
+
+// int main () {
+
+    // int num1 = 10;
+    // int num2 = 20;
+
+    // int &ref = num;
+
+    // ref += 20;
+
+    // cout << num << endl;
+
+    // swapping(num1, num2);
+
+    // cout << num1 << " " << num2 << endl;
+
+    // vector<int>v(5,0);
+    // plusOne(v);
+
+    // for(int i = 0; i < v.size(); i++) {
+    //     cout << v[i] << endl;
+    // }
+
+//     int arr[5] = {1, 2, 3, 4, 5};
+    
+//     int n = 5;
+
+//     plusOne(arr);
+
+//     for(int i = 0; i < 5; i++) {
+//         cout << arr[i] << endl;
+//     }
+
+//     return 0;
+// }
