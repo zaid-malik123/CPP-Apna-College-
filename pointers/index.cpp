@@ -292,3 +292,35 @@
 
 // //     return 0;
 // // }
+
+// lecture 5 pointers
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     // variable ko heap memory me store karna hia;
+
+//     // int *ptr = new int;
+
+//     // float *ptr1 = new float;
+
+//     // *ptr = 5;
+//     // *ptr1 = 1.4;
+
+//     // cout << *ptr << endl;
+//     // cout << *ptr1 << endl;
+
+//     // int n;
+
+//     // cout << "Enter the array size : " << endl;
+
+//     // cin >> n;
+
+//     // int *ptr = new int[n];
+
+//     // cout << ptr << endl;
+//     // return 0;
+// }
