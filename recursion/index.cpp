@@ -174,3 +174,38 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int lastOccurance(int arr[], int n, int target, int i) {
+
+//     if(i == n) {
+//         return -1;
+//     }
+
+//     int idxfound = lastOccurance(arr, n, target, i + 1);
+
+//     if(arr[i] == target && idxfound == -1) {
+//         return i;
+//     }
+
+//     return idxfound;
+// }
+
+
+// int main () {
+
+//     int arr[5] = {1, 2, 2, 2, 3};
+
+//     int n = 5;
+//     int target = 2;
+
+//     int i = 0;
+
+//     cout << "Last Occ : " << lastOccurance(arr, n, target, i) << endl;
+
+//     return 0;
+
+// }
