@@ -209,3 +209,35 @@
 //     return 0;
 
 // }
+
+// print x^n using recursion;
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int calPow(int x, int n) {
+
+//     if(n == 0) {
+//         return 1;
+//     }
+
+//     return x * calPow(x, n-1);
+
+// }
+
+// int main () {
+
+//     int x, n;
+
+//     cout << "Enter the Value of X : ";
+//     cin >> x;
+
+//     cout << "Enter the Value of N : ";
+//     cin >> n;
+
+//     cout << "Answer is : " << calPow(x, n) << endl;
+
+//     return 0;
+// }
