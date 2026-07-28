@@ -18,7 +18,7 @@
 
 // int main () {
 
-//     int n; 
+//     int n;
 //     cout << "Enter the number : ";
 //     cin >> n;
 
@@ -54,7 +54,6 @@
 
 //     printEven(n);
 
-
 //     return 0;
 // }
 
@@ -71,7 +70,7 @@
 //     }
 
 //     return n + printSumOfNaturalNumber(n-1);
-    
+
 // }
 
 // int main () {
@@ -80,7 +79,6 @@
 //     int sum = 0;
 //     cout << "Enter the number : ";
 //     cin >> n;
-
 
 //     int sumTotal = printSumOfNaturalNumber(n);
 //     cout << "Natural Number sum is " << sumTotal << endl;
@@ -101,7 +99,6 @@
 
 //     return sum(n-1) + sum(n-2);
 // }
-
 
 // int main () {
 
@@ -194,7 +191,6 @@
 //     return idxfound;
 // }
 
-
 // int main () {
 
 //     int arr[5] = {1, 2, 2, 2, 3};
@@ -212,7 +208,6 @@
 
 // print x^n using recursion;
 
-
 // #include<iostream>
 
 // using namespace std;
@@ -228,6 +223,44 @@
 // }
 
 // int main () {
+
+//     int x, n;
+
+//     cout << "Enter the Value of X : ";
+//     cin >> x;
+
+//     cout << "Enter the Value of N : ";
+//     cin >> n;
+
+//     cout << "Answer is : " << calPow(x, n) << endl;
+
+//     return 0;
+// }
+
+// optimized approach to calculate power using recursion;
+
+// #include <iostream>
+
+// using namespace std;
+
+// int calPow(int x, int n) {
+
+//     if( n == 0) {
+//         return 1;
+//     }
+
+//     int half = calPow(x, n/2);
+
+//     if(n % 2 != 0) {
+//         return x * half * half;
+//     }
+
+//     return half * half;
+
+// }
+
+// int main()
+// {
 
 //     int x, n;
 
