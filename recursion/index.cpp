@@ -110,3 +110,67 @@
 //     cout << sum(n);
 
 // }
+
+// check is array sorted or not ?
+
+// #include<iostream>
+
+// using namespace std;
+
+// bool checkIsSort( int *arr, int n, int i) {
+
+//     if(i == n-1) {
+//         return true;
+//     }
+
+//     if(arr[i] > arr[i+1]) {
+//         return false;
+//     }
+
+//     return checkIsSort(arr, n, i+1);
+
+// }
+
+// int main () {
+
+//     int arr1[5] = {1, 2, 3, 4, 5};
+//     int arr2[5] = {1, 3, 2, 4, 5};
+
+//     int n = 5;
+//     int i = 0;
+
+//     bool ans = checkIsSort(arr2, n, i);
+
+//     cout << ans << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int searchTarget(int arr[], int n, int i, int target) {
+
+//     if (i == n) {
+//         return -1;
+//     }
+
+//     if (arr[i] == target) {
+//         return i;
+//     }
+
+//     return searchTarget(arr, n, i + 1, target);
+// }
+
+// int main() {
+
+//     int arr[] = {1, 2, 2, 2, 4, 5, 6};
+//     int target = 2;
+//     int i = 0;
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     int ans = searchTarget(arr, n, i, target);
+//     cout << "Target IDX is " << ans << endl;
+
+//     return 0;
+// }
