@@ -274,3 +274,53 @@
 
 //     return 0;
 // }
+
+// trilling problem using recursion;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int trillingProblem(int n) {
+
+//     if(n == 0 || n == 1) {
+//         return 1;
+//     }
+
+//     return trillingProblem(n-1) + trillingProblem(n-2);
+
+// }
+
+// int main () {
+
+//     int n = 5;
+
+//     cout << trillingProblem(n) << endl;
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int sumOfSqr(int n) {
+
+//     if(n == 1) {
+//         return 1;
+//     }
+
+//     return n * n + sumOfSqr(n-1);
+// }
+
+// int main () {
+
+//     int n;
+
+//     cout << "Enter the No : ";
+//     cin >> n;
+
+//     cout << "Ans is : " << sumOfSqr(n) << endl;
+
+//     return 0;
+// }
