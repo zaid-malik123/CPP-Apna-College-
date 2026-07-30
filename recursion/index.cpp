@@ -324,3 +324,46 @@
 
 //     return 0;
 // }
+
+// euclidian algoritham;
+
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int a = 12;
+//     int b = 18;
+
+//     while (b != 0)
+//     {
+//         int rem = a % b;
+//         a = b;
+//         b = rem;
+//     }
+
+//     cout << "GCD = " << a << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int gcd(int a, int b)
+// {
+//     if (b == 0)
+//         return a;
+
+//     return gcd(b, a % b);
+// }
+
+// int main()
+// {
+//     int a = 12;
+//     int b = 18;
+
+//     cout << gcd(a, b);
+
+//     return 0;
+// }
