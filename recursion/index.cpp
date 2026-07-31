@@ -367,3 +367,143 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void removeDuplicate(string str, string ans, vector<int> &v, int n, int i) {
+
+
+//     if(i == n) {
+//         cout << ans << endl;
+//         return;
+//     }
+
+//     if(v[i] == 1) {
+//         removeDuplicate(str, ans, v, n,  i+1);
+//     }
+
+//     else {
+//         ans += str[i];
+//         v[i] = 1;
+//     }
+
+// }
+
+
+// int main () {
+
+//     string str = "appnna colllege";
+
+//     string ans = "";
+
+//     vector<int>v(26, 0);
+
+//     int n = str.size();
+
+//     int i = 0;
+
+    
+//     return 0;
+// }
+
+// recursion in array lecture 55;
+
+// print array using recursion;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+    
+
+//     return 0;
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// void printArr(int arr[], int n, int i) {
+
+//         if(i == n) {
+//             return;
+//         }
+//         printArr(arr, n, i+1);
+//         cout << arr[i] << endl;
+
+//         return ;
+
+// }
+
+// int main () {
+
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int n = 5;
+
+//     int i = 0;
+
+//     printArr(arr, n, i);
+
+
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int sum(int arr[], int n, int i) {
+
+//     if(i == -1) return 0;
+
+//     return arr[i] + sum(arr, n, i-1);
+
+// }
+
+// int main () {
+
+//     int arr[] = {1, 2, 3, 4, 5};
+
+//     int n = 5;
+
+//     int i = n-1;
+
+//     cout << sum(arr, n, i) << endl;
+
+//     return 0;
+
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int Minimum(int arr[],  int n, int i) {
+
+//     if(i==n) return INT_MAX;
+
+    
+//     return min(arr[i], Minimum(arr, n, i+1));
+
+// }
+
+
+// int main () {
+
+//     int arr[] = {7, 2, 1, 4, 6};
+
+//     int n = 5;
+//     int i = 0;
+    
+
+//     cout << "Min No :- " << Minimum(arr, n, i) << endl;
+
+
+//     return 0;
+// }
