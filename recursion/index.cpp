@@ -604,3 +604,32 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void lowerToCapital(string &str, int n, int i) {
+
+//     if(i == n) return;
+
+//     str[i] = 'A' + str[i] - 'a';
+
+
+//     lowerToCapital(str, n, i+1);
+// }
+
+// int main () {
+
+//     string str = "zaid";
+
+//     int n = str.size();
+
+//     int i = 0;
+
+//     lowerToCapital(str, n, i);
+
+//     cout << str << endl;
+
+//     return 0;
+// }
