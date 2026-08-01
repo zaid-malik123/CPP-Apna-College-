@@ -507,3 +507,69 @@
 
 //     return 0;
 // }
+
+
+// recursion in array;
+
+// #include<iostream>
+
+// using namespace std;
+
+// bool checkPalindrome(string str, int n, int i , int j) {
+
+//     if(i >= j) {
+//         return true;
+//     }
+
+//     if(str[i] != str[j]) return false;
+
+//     return checkPalindrome(str, n, i+1, j-1);
+
+// }
+
+// int main () {
+
+//     string str = "madom";
+//     int n = str.size();
+//     int i = 0;
+//     int j = n-1;
+
+//     cout << checkPalindrome(str, n, i, j) << "Your string palindrome" << endl;
+    
+
+//     return 0;
+// }
+
+// count vowels;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int countVowels(string str, int n, int i) {
+
+//     if(i == n) return 0;
+
+//     if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+//         return 1 + countVowels(str, n, i + 1);
+//     }
+
+//     else {
+//           return  countVowels(str, n, i + 1);
+//     }
+
+// }
+
+// int main () {
+
+//     string str = "zaid";
+
+//     int n = str.size();
+
+//     int i = 0;
+
+
+//     cout << "String Vowels are : " << countVowels(str, n, i) << endl;
+
+//     return 0;
+// }
