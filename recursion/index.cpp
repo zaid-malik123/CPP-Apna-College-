@@ -573,3 +573,34 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void reverseStr(string &str, int n, int i, int j) {
+
+//     if(i >= j) return;
+
+//     swap(str[i], str[j]);
+
+//     reverseStr(str, n, i+1, j-1);
+
+// }
+
+
+
+// int main () {
+
+//     string str = "zaid";
+//     int n = str.size();
+//     int i = 0;
+//     int j = n-1;
+
+
+//     reverseStr(str, n, i, j);
+    
+//     cout << str << endl;
+
+//     return 0;
+// }
