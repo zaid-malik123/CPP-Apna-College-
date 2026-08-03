@@ -372,42 +372,61 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// using namespace std;
+
+
+// int main() {
+
+//     int arr[] = {1, 2, 3, 4, 10, 5, 6, 7};
+
+//     int k = 2;
+
+//     int n = 8;
+
+//     int low = 0;
+//     int high = k - 1;
+
+//     int sum = 0;
+
+//     int maxSum = sum;
+
+//     for(int i = low; i <= high; i++) {
+//         sum += arr[i];
+//     }
+
+//     while (high < n - 1)
+//     {
+        
+//         low++;
+//         high++;
+//         sum = sum - arr[low-1] + arr[high];
+
+//         maxSum = max(sum, maxSum);
+
+        
+//     }
+    
+//     cout << "Max sum of k sub array is " << maxSum << endl;
+
+//     return 0;
+// }
+
+// dynamic size window question
+
 #include<iostream>
+
 using namespace std;
 
+int main () {
 
-int main() {
+    int arr[] = { 1, 2, 4, 5, 7, 8};
+    int n = 6;
 
-    int arr[] = {1, 2, 3, 4, 10, 5, 6, 7};
-
-    int k = 2;
-
-    int n = 8;
+    int target = 5;
 
     int low = 0;
-    int high = k - 1;
-
-    int sum = 0;
-
-    for(int i = low; i <= high; i++) {
-        sum += arr[i];
-    }
-
-    int maxSum = sum;
-
-    while (high < n - 1)
-    {
-        
-
-        sum = sum - arr[low-1] + arr[high];
-
-        maxSum = max(sum, maxSum);
-
-        low++;
-        high++;
-    }
-    
-    cout << "Max sum of k sub array is " << sum << endl;
+    int high = 0;
 
     return 0;
 }

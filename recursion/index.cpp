@@ -633,3 +633,39 @@
 
 //     return 0;
 // }
+
+// #include <iostream>
+// using namespace std;
+
+// bool BinarySearch(int arr[], int n, int target, int st, int end) {
+
+//     if (st > end) {
+//         return false;
+//     }
+
+//     int mid = st + (end - st) / 2;
+
+//     if (arr[mid] == target) {
+//         return true;
+//     }
+//     else if (arr[mid] < target) {
+//         return BinarySearch(arr, n, target, mid + 1, end);
+//     }
+//     else {
+//         return BinarySearch(arr, n, target, st, mid - 1);
+//     }
+// }
+
+// int main() {
+
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int n = 5;
+//     int x = 4;
+
+//     if (BinarySearch(arr, n, x, 0, n - 1))
+//         cout << "Found";
+//     else
+//         cout << "Not Found";
+
+//     return 0;
+// }
