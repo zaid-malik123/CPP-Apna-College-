@@ -90,7 +90,6 @@
 
 // dynamiv size window example;
 
-
 // count of substring without repeating chat;
 
 // fixed window template;
@@ -137,4 +136,104 @@
 
 //     // Answer update karo
 //     updateAnswer();
+// }
+
+// longest substring with uniqe char of k;
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+
+//     string str = "aabacbebebe";
+
+//     unordered_map<int, int> mp;
+
+//     int n = str.size();
+
+//     int high = 0;
+//     int low = 0;
+
+//     int k = 3;
+
+//     int len = INT_MIN;
+
+//     for (high = 0; high < n; high++)
+//     {
+
+//         mp[str[high]]++;
+
+//         while (mp.size() > k)
+//         {
+//             /* code */
+
+//             mp[str[low]]--;
+
+//             if (mp[str[low]] == 0)
+//             {
+//                 mp.erase(str[low]);
+//             }
+
+//             low++;
+//         }
+
+//         if (mp.size() == k)
+//         {
+//             len = max(len, high - low + 1);
+//         }
+//     }
+
+//     cout << len << endl;
+
+//     return 0;
+// }
+
+// longest substring without repeating char
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     string s = "abcabcbb";
+
+//     int n = s.size();
+
+//     unordered_map<int, int> mp;
+
+//     int high = 0;
+
+//     int low = 0;
+
+//     int len = INT_MIN;
+
+//     for(high = 0; high < n; high++) {
+
+//         mp[s[high]]++;
+
+//         while (mp[s[high]] > 2)
+//         {
+//             /* code */
+
+//             mp[s[low]]--;
+
+//             if(mp[s[low]] == 0) {
+//                 mp.erase(s[low]);
+//             }
+
+//             low++;
+//         }
+
+//         len = max(len, high - low + 1);
+        
+//     }
+
+
+//     cout << len << endl;
+
+
+//     return 0;
 // }
