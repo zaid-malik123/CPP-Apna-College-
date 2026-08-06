@@ -228,12 +228,10 @@
 //         }
 
 //         len = max(len, high - low + 1);
-        
+
 //     }
 
-
 //     cout << len << endl;
-
 
 //     return 0;
 // }
@@ -254,7 +252,6 @@
 
 //     int maxLen = INT_MIN;
 
-
 //     unordered_map<int, int> mp;
 
 //     for( high = 0; high < n; high++ ) {
@@ -274,11 +271,85 @@
 //             low++;
 
 //         }
-        
+
 //         maxLen = max(high - low + 1, maxLen );
 //     }
 
 //     cout << maxLen << endl;
+
+//     return 0;
+// }
+
+// longest repeating character replacement;
+
+// #include <iostream>
+
+// using namespace std;
+
+// int findMax(int arr[])
+// {
+
+//     int maxVal = 0;
+
+//     for (int i = 0; i < 256; i++)
+//     {
+//         maxVal = max(arr[i], maxVal);
+//     }
+
+//     return maxVal;
+// }
+
+// int main()
+// {
+
+//     string str = "AABACBA";
+
+//     int n = str.size();
+
+//     int k = 1;
+
+//     int high = 0;
+
+//     int low = 0;
+
+//     int arr[256] = {0};
+
+//     int res = INT_MIN;
+
+//     for (high = 0; high < n; high++)
+//     {
+
+//         arr[str[high]]++;
+
+//         int len = high - low + 1;
+
+//         int maxVal = findMax(arr);
+
+//         int dif = len - maxVal;
+
+//         while (dif > k)
+//         {
+//             /* code */
+
+//             arr[str[low]]--;
+
+//             low++;
+
+//             len = high - low + 1;
+
+//             maxVal = findMax(arr);
+
+//             dif = len - maxVal;
+
+//         }
+
+//         len = high - low + 1;
+
+//         res = max(len, res);
+    
+//     }
+
+//     cout << "Your Max Value is " << res << endl;
 
 //     return 0;
 // }
