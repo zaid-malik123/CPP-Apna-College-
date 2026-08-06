@@ -237,3 +237,48 @@
 
 //     return 0;
 // }
+
+// longest substring with repeating char;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     string str = "AAAAABBBCC";
+
+//     int n = str.size();
+
+//     int low = 0, high = 0;
+
+//     int maxLen = INT_MIN;
+
+
+//     unordered_map<int, int> mp;
+
+//     for( high = 0; high < n; high++ ) {
+
+//         mp[str[high]]++;
+
+//         while (mp.size() > 1)
+//         {
+//             /* code */
+
+//             mp[str[low]]--;
+
+//             if(mp[str[low]] == 0) {
+//                 mp.erase(str[low]);
+//             }
+
+//             low++;
+
+//         }
+        
+//         maxLen = max(high - low + 1, maxLen );
+//     }
+
+//     cout << maxLen << endl;
+
+//     return 0;
+// }
