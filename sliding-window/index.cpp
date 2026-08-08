@@ -509,3 +509,69 @@
 //     cout << ans;
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// bool sahi(int have[], int needed[]) {
+
+//     for(int i = 0; i < 256; i++ ) {
+
+//         if(have[i] < needed[i]) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+
+// }
+
+// int main () {
+
+//     string str = "ADOBECODEBANC";
+//     string s = "ABC";
+
+//     int have[256] = {0};
+//     int needed[256] = {0};
+
+//     for(int i = 0; i < 256; i++ ) {
+
+//         needed[s[i]]++;
+
+//     }
+
+//     int high = 0, low = 0, start = 0, res = INT_MAX;
+
+//     for( high = 0; high < str.size(); high++ ) {
+        
+//         have[str[high]]++;
+
+//         while (sahi(have, needed))
+//         {
+//             /* code */
+
+//             int len = high - low + 1;
+
+//             if(res > len) {
+//                 res = len;
+//                 start = low;
+//             }
+
+//             have[str[low]]--;
+//             low++;
+
+//             sahi(have, needed);
+
+//         }
+        
+//     }
+
+
+//     if(res != INT_MAX) {
+//         cout << str.substr(start, res);
+//     };
+
+
+//     return 0;
+// }
