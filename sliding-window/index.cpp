@@ -346,10 +346,166 @@
 //         len = high - low + 1;
 
 //         res = max(len, res);
-    
+
 //     }
 
 //     cout << "Your Max Value is " << res << endl;
 
+//     return 0;
+// }
+
+// longest substring without repeating char;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     string str = "abcdaabbfg";
+
+//     int n = str.size();
+//     unordered_map<int, int> mp;
+
+//     int low = 0;
+//     int high = 0;
+//     int res = INT_MIN;
+
+//     for( high = 0; high < n; high++ ) {
+
+//         mp[str[high]]++;
+
+//         int k = high - low + 1;
+
+//         while (mp.size() < k)
+//         {
+//             /* code */
+
+//             mp[str[low]]--;
+
+//             if(mp[str[low]] == 0) {
+//                 mp.erase(str[low]);
+//             }
+
+//             low++;
+
+//             k = high - low + 1;
+//         }
+
+//         res = max(res, high - low + 1);
+
+//     }
+
+//     cout << "Max without repeating char is " << res << endl;
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     int arr[] = {1, 1, 0, 0, 1 , 1};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     int k = 2;
+
+//     int low = 0, high = 0;
+//     int binary[2] = {0};
+
+//     int res = INT_MIN;
+
+//     for( high = 0; high < n; high++ ) {
+
+//         binary[arr[high]]++;
+
+//         int countZero = binary[0];
+
+//         while (countZero > k)
+//         {
+//             /* code */
+
+//             binary[arr[low]]--;
+
+//             low++;
+
+//             countZero = binary[0];
+//         }
+
+//         res = max(res, high - low + 1);
+
+//     }
+
+//     cout << res << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+
+// using namespace std;
+
+// bool checkStrExistOrNot(string str, string s)
+// {
+
+//     vector<int> freq(256, 0);
+
+//     for (char ch : str)
+//         freq[ch]++;
+
+//     for (char ch : s)
+//     {
+//         if (freq[ch] == 0)
+//             return false;
+
+//         freq[ch]--;
+//     }
+
+//     return true;
+// }
+
+// int main()
+// {
+
+//     string str = "ABCECODEBANC";
+
+//     string s = "ABC";
+
+//     int low = 0;
+
+//     int high = 0;
+
+//     int res = INT_MAX;
+
+//     for (high = 0; high < str.size(); high++)
+//     {
+
+//         bool exist = checkStrExistOrNot(
+//             str.substr(low, high - low + 1),
+//             s);
+
+//         while (exist)
+//         {
+//             /* code */
+
+//             res = min(res, high - low + 1);
+
+//             low++;
+
+//             exist = checkStrExistOrNot(
+//                 str.substr(low, high - low + 1),
+//                 s);
+//         }
+//     }
+
+//     string ans = "";
+
+//     for(int i = low; i <= high; i++ ){
+//         ans += str[i];
+//     }
+
+
+//     cout << ans;
 //     return 0;
 // }
