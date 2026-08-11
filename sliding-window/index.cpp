@@ -619,22 +619,152 @@
 //     return 0;
 // }
 
-#include<iostream>
+// #include<iostream>
 
-using namespace std;
+// using namespace std;
 
-int main() {
+// int main() {
 
-    char arr[5] = {'A', 'A', 'A', 'B', 'C'};
+//     string str = "aabacbebebe";
 
-    int n = 5;
+//     int n = str.size();
 
-    int maxVal = 0;
+//     int k = 3;
 
-    for(int i = 0; i < n; i++ ) {
+//     int low = 0;
 
+//     int high = 0;
+//     int ans = INT_MIN;
+
+//     unordered_map<int, int> mp;
+
+//     for( high = 0; high < n; high++ ) {
+
+//         mp[str[high]]++;
+
+//         while (mp.size() > k)
+//         {
+//             /* code */
+
+//             mp[str[low]]--;
+
+//             if(mp[str[low]] == 0) {
+//                 mp.erase(str[low]);
+//             }
+
+//             low++;
+//         }
+
+//         if( mp.size() <= k) {
+
+//             ans = max(ans, high - low + 1);
+//         }
         
+//     }
 
-    }
-    return 0;
-}
+//     cout << "Your ans is " << ans << endl;
+
+    
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     int arr[6] = {2,3,1,2,4,3};
+
+//     int n = 6;
+
+//     int target = 7;
+
+//     int sum = 0;
+
+//     int high = 0;
+//     int low = 0;
+//     int ans = INT_MAX;
+
+//     for( high = 0; high < n; high++ ) {
+
+//         sum += arr[high];
+
+//         while (sum >= target)
+//         {
+//             /* code */
+
+//             ans = min( ans, high - low + 1);
+
+//             sum -= arr[low];
+
+//             low++;
+
+            
+//         }
+        
+//     }
+
+//     cout << "Your ans is " << ans << endl;
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     string str = "AABBBCBBAC";
+
+//     int n = str.size();
+
+//     int ans = INT_MAX;
+
+
+//     int low = 0;
+
+//     int high = 0;
+
+//     int freq[256] = {0};
+//     int k = 0;
+
+//     for( int i = 0; i < n; i++ ) {
+
+//         if( freq[str[i]] == 0 ) {
+//             k++;
+//         }
+
+//         freq[str[i]]++;
+//     }
+
+//     unordered_map<int, int> mp;
+
+//     for ( high = 0; high < n; high++ ) {
+
+//         mp[str[high]]++;
+
+//         while (mp.size() == k)
+//         {
+//             /* code */
+
+//             ans = min( ans, high - low + 1);
+
+//             mp[str[low]]--;
+
+//             if(mp[str[low]] == 0) {
+//                 mp.erase(str[low]);
+//             }
+
+//             low++;
+
+//         }
+        
+//     }
+
+//     cout << "Your ans is " << ans << endl;
+
+//     return 0;
+// }
+
