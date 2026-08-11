@@ -575,3 +575,66 @@
 
 //     return 0;
 // }
+
+// fruites into basket;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main() {
+
+//     int arr[] = { 0, 1, 2, 2 };
+
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     unordered_map<int, int> mp;
+
+//     int low = 0, high = 0, ans = INT_MIN;
+
+//     for( int high = 0; high < n; high++ ) {
+
+//         mp[arr[high]]++;
+
+//         while (mp.size() > 2)
+//         {
+//             /* code */
+
+//             mp[arr[low]]--;
+
+//             if(mp[arr[low]] == 0) {
+//                 mp.erase(arr[low]);
+//             }
+
+//             low++;
+//         }
+
+//         ans = max(ans, high - low + 1);
+
+        
+//     }
+    
+//     cout << ans << endl;
+
+//     return 0;
+// }
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+    char arr[5] = {'A', 'A', 'A', 'B', 'C'};
+
+    int n = 5;
+
+    int maxVal = 0;
+
+    for(int i = 0; i < n; i++ ) {
+
+        
+
+    }
+    return 0;
+}
