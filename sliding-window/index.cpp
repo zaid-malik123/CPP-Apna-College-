@@ -768,3 +768,50 @@
 //     return 0;
 // }
 
+// #include<iostream>
+
+// using namespace std;
+
+// int main () {
+
+//     int arr[] = { 1, 2, 1, 2, 3};
+//     int n = 5;
+
+//     int count = 0;
+
+//     int k = 2;
+
+//     int low = 0;
+//     int high = 0;
+
+//     unordered_map<int, int> mp;
+
+//     for ( high = 0; high < n; high++ ) {
+
+//         mp[arr[high]]++;
+
+//         while (mp.size() > k)
+//         {
+//             /* code */
+
+//             mp[arr[low]]--;
+
+//             if( mp[arr[low]] == 0) {
+//                 mp.erase(arr[low]);
+//             }
+
+//             low++;
+//         }
+        
+//         if( mp.size() == k ) {
+//             count++;
+//         }
+
+        
+//     }
+
+//     cout << "Total count is " << count + k + 1 << endl;
+
+//     return 0;
+
+// }
