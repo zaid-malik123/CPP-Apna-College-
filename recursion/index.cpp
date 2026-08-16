@@ -669,3 +669,59 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int searchInRotatedArray(int arr[], int st, int end, int target) {
+
+//     if(st > end) return -1;
+
+//     int mid = st + ( end - st ) / 2;
+
+//     if(arr[mid] == target) {
+//         return mid;
+//     }
+
+//     if( arr[st] <= arr[mid] ) { // line 1
+
+//         if(arr[st] <= target && arr[end] >= target) {
+//             return searchInRotatedArray(arr, st, mid-1, target);
+//         }
+
+//         else {
+//             return (arr, mid+1, end, target);
+//         }
+//     }
+
+//     else { // line 2;
+
+//         if(arr[mid] <= target && arr[end] >= target) {
+
+//             searchInRotatedArray(arr, mid+1, end, target);
+
+//         }
+
+//         else {
+//             searchInRotatedArray(arr, st, mid-1, target);
+//         }
+
+//     }
+
+// }
+
+// int main () {
+
+//     int arr[] = {4, 5, 6, 7, 0, 1, 2};
+
+//     int n = 7;
+
+//     int st = 0;
+//     int end = n - 1;
+//     int target = 0;
+
+//     cout << "Your searching elem idx is : " << searchInRotatedArray(arr, st, end, target) << endl;
+
+//     return 0;
+// }
