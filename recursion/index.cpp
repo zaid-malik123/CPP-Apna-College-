@@ -725,3 +725,56 @@
 
 //     return 0;
 // }
+
+// print the subsequence;
+
+#include<iostream>
+
+using namespace std;
+
+void subsequence(int arr[], int n, int i, vector<vector<int>>&ans, vector<int> &temp) {
+
+    if( i == n ) {
+        ans.push_back(temp);
+        return;
+    }
+
+    // not include;
+    subsequence(arr, n, i+1, ans, temp);
+
+    // include;
+    temp.push_back(arr[i]);
+    subsequence(arr, n, i+1, ans, temp);
+    temp.pop_back();
+
+}
+
+int main () {
+
+    int arr[] = { 1, 2, 3 };
+
+    int n = 3;
+
+    vector<int> temp;
+    vector<vector<int>> ans;
+
+    int i = 0;
+
+    subsequence(arr, n, i, ans, temp);
+
+    for ( int i = 0; i < ans.size(); i++ ) {
+
+        for ( int j = 0; j < ans[i].size(); j++ ) {
+
+            cout << ans[i][j] << " ";
+
+        }
+
+        cout << endl;
+    }
+
+    cout << "Your ans size is :- " << ans.size() << endl;
+
+    return 0;
+
+}
