@@ -779,27 +779,49 @@
 
 // }
 
-#include<iostream>
+// #include<iostream>
 
-using namespace std;
+// using namespace std;
 
-void subsetSum( int arr[], int n, int i, int sum) {
+// void generateParanthrasis( int n, int left, int right, vector<string>& ans, string &temp) {
 
-    if(i == n) return;
 
-    subsetSum(arr, n, i, sum);
+//     if ( left + right == 2*n ) {
+//         ans.push_back(temp);
+//         return;
+//     };
 
-    subsetSum(arr, n, i, sum+=arr[i]);
-}
+//     if( left < n) {
 
-int main () {
+//         temp.push_back('(');
+//         generateParanthrasis(n, left+1, right, ans, temp);
+//         temp.pop_back();
+//     }
 
-    int arr[] = { 1, 2, 3 };
-    int n = 3;
-    int sum = 0;
-    int i = 0;
+//     if ( right < left ) {
+//         temp.push_back(')');
+//         generateParanthrasis(n, left, right+1, ans, temp);
+//         temp.pop_back();
+//     }
+// }
 
-    subsetSum(arr, n, i, sum);
-    return 0;
 
-}
+
+// int main() {
+
+//     int n = 3;
+
+//     vector<string> ans;
+//     string temp;
+
+//     int left = 0;
+//     int right = 0;
+
+//     generateParanthrasis(n, left, right, ans, temp);
+
+//     for ( int i = 0; i < ans.size(); i++ ) {
+//         cout << ans[i] << endl;
+//     }
+
+//     return 0;
+// }
