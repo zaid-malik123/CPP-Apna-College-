@@ -825,3 +825,78 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void subsetSum( int arr[], int n, int i, int total, vector<int> &temp) {
+
+//     if ( i == n) {
+
+//         cout << total << endl;
+
+//         return;
+//     };
+
+
+//     subsetSum(arr, n, i+1, total, temp);
+
+//     subsetSum(arr, n, i+1, total+=arr[i], temp);
+    
+
+// }
+
+// int main () {
+
+//     int arr[] = { 3, 4, 5 };
+
+//     int n = 3;
+
+//     int total = 0;
+
+//     int i = 0;
+
+//     vector<int> temp;
+
+//     subsetSum(arr, n, i, total, temp);
+
+//     return 0;
+
+// }
+
+// target sum;
+
+// #include<iostream>
+
+// using namespace std;
+
+// int find(int arr[], int n, int i, int target, int &count) {
+
+//     if(target == 0) {
+//         return 1;
+//     }
+
+//     if( i == n || target < 0) return 0;
+
+//     return find(arr, n, i+1, target, count) + find(arr, n, i+1, target-arr[i], count);
+
+// }
+
+// int main () {
+
+//     int arr[] = {5, 2, 3, 6, 10, 8};
+//     int n = 6;
+//     int target = 10;
+//     int count = 0;
+
+//     int i = 0;
+
+//     cout << find(arr, n, i, target, count) << endl;
+
+//     return 0;
+
+// }
+
+
+
