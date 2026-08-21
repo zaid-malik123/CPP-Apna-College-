@@ -898,5 +898,112 @@
 
 // }
 
+// subarrays with k diffrent integers;
+
+// #include<iostream>
+
+// using namespace std;
+
+// void countSubarrayWithDistinctInteger (int arr[], int n, int i, int k, int &count) {
+
+//     if ( i == n ) return;
+
+//     unordered_map<int, int> mp;
+
+//     int low = i;
+//     int high = i;
+
+//     while (high < n)
+//     {
+//         /* code */
+
+//         mp[arr[high]]++;
+
+//         while (k < mp.size())
+//         {
+//             break;
+//         }
+        
+//         if(mp.size() == k ) {
+//             count++;
+//         }
+        
+
+//         high++;
+
+//     }
+
+//     countSubarrayWithDistinctInteger(arr, n, i+1, k, count);
+    
+// }
+
+// int main () {
+
+//     int arr[] = { 1, 2, 1, 2, 3};
+//     int n = 5;
+//     int k = 2;
+//     int i = 0;
+//     int count = 0;
+
+//     countSubarrayWithDistinctInteger(arr, n, i, k, count);
+
+//     cout << "Your count is " << count << endl;
 
 
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int subset(int arr[], int n, int i, int sum) {
+
+//     if ( i == n) {
+
+//         return sum == 0;
+
+//     }
+
+//     return subset(arr, n, i+1, sum) + subset(arr, n, i, sum-arr[i]);
+// }
+
+// int main () {
+
+//     int arr[] = {2, 5, 6, 1};
+//     int n = 4;
+
+//     int sum = 8;
+
+//     int i = 0;
+
+//     cout << subset(arr, n, i, sum) << endl;
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int targetRepetation( int arr[], int n, int i, int sum ) {
+
+//     if( i == n || sum < 0 ) return 0;
+
+//     if( sum == 0 ) return 1;
+
+//     return targetRepetation(arr, n, i+1, sum) + targetRepetation(arr, n, i, sum-arr[i]);
+
+// }
+
+// int main() {
+
+//     int arr[] = {2, 3, 4};
+//     int n = 3;
+//     int sum = 6;
+
+//     int i = 0;
+
+//     cout << targetRepetation(arr, n, i, sum) << endl;
+
+
+//     return 0;
+// }
