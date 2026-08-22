@@ -1007,3 +1007,62 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void permutation( int arr[], int n, int i, vector<vector<int>> &ans, vector<int> &temp, vector<bool>&visited) {
+
+//     if( temp.size() == n ) {
+
+//         ans.push_back(temp);
+
+//         return;
+//     }
+
+//     for( int i = 0; i < n; i++ ) {
+
+//         if( visited[i] == 0 ) {
+
+//             visited[i] = 1;
+
+//             temp.push_back(arr[i]);
+
+//             permutation(arr, n, i, ans, temp, visited);
+
+//             visited[i] = 0;
+
+//             temp.pop_back();
+
+//         }
+//     }
+
+// }
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3 };
+//     int n = 3;
+//     int i = 0;
+
+//     vector<vector<int>> ans;
+//     vector<int> temp;
+//     vector<bool> visited(n, 0);
+
+//     permutation(arr, n, i, ans, temp, visited);
+
+//     for( int i = 0; i < ans.size(); i++ ) {
+
+//         for( int j = 0; j < ans[i].size(); j++ ) {
+
+//             cout << ans[i][j] << " ";
+
+//         }
+
+//         cout << endl;
+
+//     }
+
+//     return 0;
+// }
