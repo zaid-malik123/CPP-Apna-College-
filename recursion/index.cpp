@@ -374,7 +374,6 @@
 
 // // void removeDuplicate(string str, string ans, vector<int> &v, int n, int i) {
 
-
 // //     if(i == n) {
 // //         cout << ans << endl;
 // //         return;
@@ -391,7 +390,6 @@
 
 // // }
 
-
 // // int main () {
 
 // //     string str = "appnna colllege";
@@ -404,7 +402,6 @@
 
 // //     int i = 0;
 
-    
 // //     return 0;
 // // }
 
@@ -418,11 +415,8 @@
 
 // // int main () {
 
-    
-
 // //     return 0;
 // // }
-
 
 // // #include<iostream>
 
@@ -448,8 +442,6 @@
 // //     int i = 0;
 
 // //     printArr(arr, n, i);
-
-
 
 // //     return 0;
 // // }
@@ -488,11 +480,9 @@
 
 // //     if(i==n) return INT_MAX;
 
-    
 // //     return min(arr[i], Minimum(arr, n, i+1));
 
 // // }
-
 
 // // int main () {
 
@@ -500,14 +490,11 @@
 
 // //     int n = 5;
 // //     int i = 0;
-    
 
 // //     cout << "Min No :- " << Minimum(arr, n, i) << endl;
 
-
 // //     return 0;
 // // }
-
 
 // // recursion in array;
 
@@ -535,7 +522,6 @@
 // //     int j = n-1;
 
 // //     cout << checkPalindrome(str, n, i, j) << "Your string palindrome" << endl;
-    
 
 // //     return 0;
 // // }
@@ -568,7 +554,6 @@
 
 // //     int i = 0;
 
-
 // //     cout << "String Vowels are : " << countVowels(str, n, i) << endl;
 
 // //     return 0;
@@ -588,8 +573,6 @@
 
 // // }
 
-
-
 // // int main () {
 
 // //     string str = "zaid";
@@ -597,9 +580,8 @@
 // //     int i = 0;
 // //     int j = n-1;
 
-
 // //     reverseStr(str, n, i, j);
-    
+
 // //     cout << str << endl;
 
 // //     return 0;
@@ -614,7 +596,6 @@
 // //     if(i == n) return;
 
 // //     str[i] = 'A' + str[i] - 'a';
-
 
 // //     lowerToCapital(str, n, i+1);
 // // }
@@ -785,7 +766,6 @@
 
 // // void generateParanthrasis( int n, int left, int right, vector<string>& ans, string &temp) {
 
-
 // //     if ( left + right == 2*n ) {
 // //         ans.push_back(temp);
 // //         return;
@@ -804,8 +784,6 @@
 // //         temp.pop_back();
 // //     }
 // // }
-
-
 
 // // int main() {
 
@@ -839,11 +817,9 @@
 // //         return;
 // //     };
 
-
 // //     subsetSum(arr, n, i+1, total, temp);
 
 // //     subsetSum(arr, n, i+1, total+=arr[i], temp);
-    
 
 // // }
 
@@ -923,18 +899,17 @@
 // //         {
 // //             break;
 // //         }
-        
+
 // //         if(mp.size() == k ) {
 // //             count++;
 // //         }
-        
 
 // //         high++;
 
 // //     }
 
 // //     countSubarrayWithDistinctInteger(arr, n, i+1, k, count);
-    
+
 // // }
 
 // // int main () {
@@ -948,7 +923,6 @@
 // //     countSubarrayWithDistinctInteger(arr, n, i, k, count);
 
 // //     cout << "Your count is " << count << endl;
-
 
 // // }
 
@@ -1003,7 +977,6 @@
 // //     int i = 0;
 
 // //     cout << targetRepetation(arr, n, i, sum) << endl;
-
 
 // //     return 0;
 // // }
@@ -1148,7 +1121,6 @@
 
 // // }
 
-
 // // int main () {
 
 // //     int arr[] = {1, 5, 6};
@@ -1161,8 +1133,6 @@
 // //     int count = 0;
 
 // //     countWays(arr, n, i, sum, count);
-
-
 
 // //     return 0;
 
@@ -1192,13 +1162,12 @@
 
 //         idx = ( idx + 1) % n;
 
-//         while (person[idx] == 1) 
+//         while (person[idx] == 1)
 //         {
 //             /* code */
 //             idx = ( idx + 1) % n;
 //         }
 
-        
 //     }
 
 //     person[idx] = 1;
@@ -1210,10 +1179,9 @@
 //         idx = ( idx + 1 ) % n;
 
 //     }
-    
+
 //     return winner(person, n, k, killing_person-1, idx);
 
-    
 // }
 
 // int main () {
@@ -1226,7 +1194,6 @@
 //     vector<bool> person(n, 0);
 
 //     int idx = 0;
-
 
 //     cout << winner(person, n, k, killing_person, idx) << endl;
 
@@ -1260,4 +1227,117 @@
 
 //     return 0;
 
+// }
+
+// #include <iostream>
+// #include <vector>
+// #include <string>
+
+// using namespace std;
+
+// bool safe(int i, int j, int n,
+//           vector<vector<bool>>& visited,
+//           vector<vector<int>>& mat) {
+
+//     if (i >= 0 &&
+//         i < n &&
+//         j >= 0 &&
+//         j < n &&
+//         !visited[i][j] &&
+//         mat[i][j] != 0) {
+
+//         return true;
+//     }
+
+//     return false;
+// }
+
+// void rateMaze(vector<vector<int>>& mat,
+//               int n,
+//               int i,
+//               int j,
+//               string path,
+//               vector<string>& ans,
+//               vector<vector<bool>>& visited) {
+
+//     if (i == n - 1 && j == n - 1) {
+//         ans.push_back(path);
+//         return;
+//     }
+
+//     visited[i][j] = 1;
+
+//     if (safe(i - 1, j, n, visited, mat)) {
+//         path.push_back('U');
+
+//         rateMaze(mat, n, i - 1, j,
+//                  path, ans, visited);
+
+//         path.pop_back();
+//     }
+
+    
+//     if (safe(i + 1, j, n, visited, mat)) {
+//         path.push_back('D');
+
+//         rateMaze(mat, n, i + 1, j,
+//                  path, ans, visited);
+
+//         path.pop_back();
+//     }
+
+    
+//     if (safe(i, j - 1, n, visited, mat)) {
+//         path.push_back('L');
+
+//         rateMaze(mat, n, i, j - 1,
+//                  path, ans, visited);
+
+//         path.pop_back();
+//     }
+
+    
+//     if (safe(i, j + 1, n, visited, mat)) {
+//         path.push_back('R');
+
+//         rateMaze(mat, n, i, j + 1,
+//                  path, ans, visited);
+
+//         path.pop_back();
+//     }
+
+    
+//     visited[i][j] = 0;
+// }
+
+// int main() {
+
+//     vector<vector<int>> mat = {
+//         {1, 0, 0, 0},
+//         {1, 1, 0, 1},
+//         {1, 1, 0, 0},
+//         {0, 1, 1, 1}
+//     };
+
+//     int n = 4;
+
+//     int x = 0;
+//     int y = 0;
+
+//     string path;
+
+//     vector<string> ans;
+
+//     vector<vector<bool>> visited(
+//         n, vector<bool>(n, false)
+//     );
+
+//     rateMaze(mat, n, x, y,
+//              path, ans, visited);
+
+//     for (string p : ans) {
+//         cout << p << endl;
+//     }
+
+//     return 0;
 // }
