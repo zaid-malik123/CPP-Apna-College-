@@ -1341,3 +1341,47 @@
 
 //     return 0;
 // }
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// void binaryNumbers(int n, string ans) {
+
+   
+//     if(n == 0) {
+//         cout << ans << endl;
+//         return;
+//     }
+
+    
+//     binaryNumbers(n - 1, ans + "1");
+
+//     int oneCount = 0;
+
+//     int zeroCount = 0;
+
+//     for ( int i = 0; i < ans.size(); i++ ) {
+
+//         if( ans[i] == '0' ) {
+//             zeroCount++;
+//         }
+
+//         else {
+//             oneCount++;
+//         }
+//     }
+
+//     if ( oneCount > zeroCount ) {
+//         binaryNumbers(n - 1, ans + "0");
+//     }
+// }
+
+// int main() {
+
+//     int n = 4;
+
+//     binaryNumbers(n, "");
+
+//     return 0;
+// }
