@@ -1385,3 +1385,62 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// void binary( int n, int zeroCount, int oneCount, string &temp, vector<string> &ans) {
+
+//     if ( n == 0 ) {
+
+//         ans.push_back(temp);
+
+//         return;
+
+//     }
+
+//     temp.push_back('1');
+
+//     binary(n-1, zeroCount, oneCount+1, temp, ans);
+
+//     temp.pop_back();
+
+//     if( oneCount > zeroCount) {
+
+//         temp.push_back('0');
+
+//         binary(n-1, zeroCount+1, oneCount, temp, ans);
+
+//         temp.pop_back();
+
+//     }
+
+// }
+
+
+// int main () {
+
+//     int n = 4;
+
+//     int zeroCount = 0;
+
+//     int oneCount = 0;
+
+//     string temp;
+
+//     vector<string> ans;
+
+
+//     binary(n, zeroCount, oneCount, temp, ans);
+
+//     for ( int i = 0; i < ans.size(); i++ ) {
+
+//         cout << ans[i] << endl;
+
+//     }
+
+
+//     return 0;
+
+// }
