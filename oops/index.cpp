@@ -59,3 +59,75 @@
 //     return 0;
 
 // }
+
+
+// constructor;
+
+// default & parameterized constructor;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Customer {
+
+//     public:
+//     string name;
+//     int age;
+
+//     public:
+//         // default constructor
+//         Customer() {
+//             cout << "Default Constructor Called";
+//         }
+//         // parameterized constructor
+//         Customer(string name) {
+//             this->name = name;
+//             this->age = 20;
+//         }
+
+//         // Constructor Overloading when constructor name is same but diffrent parameters that is called constructor overloading;
+//         Customer(string name, int age) {
+//             this->name = name;
+//             this->age = age;
+//         }
+
+//         // inline constructor;
+
+//         // Customer ( string name, int age ) : name(name), age(age) {
+
+//         // }
+
+
+//         // copy constructor;
+
+//         Customer(Customer &B) {
+
+//             name = B.name;
+//             age = B.age;
+
+//         }
+
+//     public: 
+           
+//         void display() {
+//             cout << this->name << " " << this->age << " " << endl;
+//         }
+
+// };
+
+// int main () {
+
+//     Customer A("zaid");
+
+//     Customer B("kaif" , 18);
+
+//     Customer C(A);
+
+//     A.display();
+//     C.display();
+//     B.display();
+
+//     return 0;
+
+// }
