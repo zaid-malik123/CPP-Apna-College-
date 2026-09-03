@@ -131,3 +131,41 @@
 //     return 0;
 
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student {
+
+//     string name;
+
+//     int age;
+
+//     public:
+//         void getDetails() {
+//             cout << this->name << "  " << this->age << endl;
+//         }
+
+//     public:
+//     Student( string name, int age ) {
+
+//         this->name = name;
+
+//         this->age = age;
+
+//     }
+
+
+
+// };
+
+// int main () {
+
+//     Student S1("zaid", 20);
+
+//     S1.getDetails();
+
+//     return 0;
+
+// }
