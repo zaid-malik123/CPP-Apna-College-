@@ -199,8 +199,11 @@
 //         cout << "Your name is " << this->name
 //         << " and your account Number is " << this->accountNumber
 //         << " and your balance is " << this->balance
-//         << " and total customer in " << totalCustomer 
 //         << endl;
+//     }
+
+//     static void showTotalCustomer() {
+//         cout << "Your Total Customer is : " << totalCustomer << endl;
 //     }
 // };
 
@@ -218,6 +221,90 @@
 
 //     C3.display();
 
+    
+
 //     return 0;
 
 // }
+
+// access modifiers;
+
+// public :- access in anywhere;
+
+// private :- access only within a class;
+
+// protected :- access derived class and within a class;
+
+
+// #include<iostream>
+
+// using namespace std;
+
+
+// class Human {
+
+//     public:
+//     string name;
+
+//     private:
+//     int age;
+
+//     protected:
+//     string gender;
+
+//     // within the class all access name age gender;
+
+//     public:
+//     void display() {
+//         name = "Jhon";
+//         age = 30;
+//         gender = "male";
+//     }
+
+
+// };
+
+
+// int main () {
+
+//     Human H1;
+
+//     H1.name = "zaid"; // access only name because it is public;
+
+//     H1.display();
+
+//     return 0;
+
+// }
+
+#include<iostream>
+
+using namespace std;
+
+class Human {
+
+    protected:
+        string name;
+        int age;
+
+};
+
+class Student : public Human {
+
+    public:
+    int roll_no;
+
+};
+
+
+int main () {
+
+    Student S1;
+    
+    
+
+    return 0;
+
+}
+
+

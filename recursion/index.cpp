@@ -1444,3 +1444,87 @@
 //     return 0;
 
 // }
+
+
+// N Queens;
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+bool isSafe(vector<vector<char>>& board, int n, int row, int col) {
+
+    
+    for (int j = col - 1; j >= 0; j--) {
+        if (board[row][j] == 'Q') {
+            return false;
+        }
+    }
+
+    
+    int i = row - 1;
+    int j = col - 1;
+
+    while (i >= 0 && j >= 0) {
+        if (board[i][j] == 'Q') {
+            return false;
+        }
+
+        i--;
+        j--;
+    }
+
+    i = row - 1;
+    j = col + 1;
+
+    while (i >= 0 && j < n) {
+        if (board[i][j] == 'Q') {
+            return false;
+        }
+
+        i--;
+        j++;
+    }
+
+    return true;
+}
+void nQueens(vector<vector<char>> &board, int n, int row) {
+
+    if ( row == n ) {
+
+        return;
+
+    }
+
+    for ( int j = 0; j < n; j++ ) {
+
+        if( isSafe(board, n, row, j) ) {
+
+            board[row][j] = 'Q';
+
+            nQueens( board, n, row+1 );
+
+            board[row][j] = '.';
+
+        }
+    }
+
+}
+
+int main() {
+    int n = 4;
+
+    vector<vector<char>> board(n, vector<char>(n, '.'));
+
+    nQueens(board, n, 0);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << board[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
