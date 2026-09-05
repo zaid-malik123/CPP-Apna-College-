@@ -277,34 +277,60 @@
 
 // }
 
-#include<iostream>
+// single inheritance :- single derived class;
 
-using namespace std;
+// #include<iostream>
 
-class Human {
+// using namespace std;
 
-    protected:
-        string name;
-        int age;
+// class Human {
 
-};
+//     protected:
 
-class Student : public Human {
+//         string name;
+//         int age;
 
-    public:
-    int roll_no;
+//     public:
 
-};
+//         Human(string name, int age) {
 
+//             this->name = name;
+//             this->age = age;
 
-int main () {
+//         }
 
-    Student S1;
+// };
+
+// class Student: public Human {
+
+//     int rollNo,  fees;
+
+//     public:
+//     Student( string name, int age, int rollNo, int fees): Human(name, age) {
+
+//         this->fees = fees;
+//         this->rollNo = rollNo;
+
+//     }
+
+//     public:
+//         void display() {
+
+//             cout << name << " " << age << " " << rollNo << " " << fees << endl;
+
+//         }
+
+// };
+
+// int main () {
+
+//     Student S1("zaid", 20, 43, 500);
+
+//     S1.display();
+
     
-    
-
-    return 0;
-
-}
 
 
+//     return 0;
+
+// }
