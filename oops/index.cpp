@@ -334,3 +334,60 @@
 //     return 0;
 
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Person {
+//     public:
+//     string name;
+
+//     public:
+//         void intro() {
+
+//             cout << "I Am " << name << endl;
+
+//         }
+    
+// };
+
+// class Employee: public Person {
+//     public:
+//     int salary;
+
+//     public:
+//         void myMonthlySalary() {
+
+//             cout << "My Monthly Salary is " << salary << endl;
+
+//         }
+
+// };
+
+// class Manager: public Employee {
+
+//     string department;
+
+//     public:
+//         Manager(string name, int salary, string department) {
+//             this->name = name;
+//             this->salary = salary;
+//             this->department = department;
+//         }
+
+//     void departmentLead() {
+//         cout << "I'm Managing the department is " << department << endl;
+//     }
+
+// };
+
+// int main () {
+
+//     Manager M1("ZAID", 100, "IT");
+//     Manager M2("KAIF", 200, "FINANCE");
+
+//     M2.myMonthlySalary();
+
+//     return 0;
+// }
