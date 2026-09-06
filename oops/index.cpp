@@ -620,3 +620,46 @@
 //     return 0;
 
 // }
+
+
+// C1.operator+(C2);
+// #include <iostream>
+// using namespace std;
+
+// class Complex {
+
+//     int real, imaginary;
+
+// public:
+
+//     Complex(int real = 0, int imaginary = 0) {
+//         this->real = real;
+//         this->imaginary = imaginary;
+//     }
+
+//     void display() {
+//         cout << real << " + " << imaginary << "i" << endl;
+//     }
+
+//     Complex operator+(Complex &c2) {
+
+//         Complex ans;
+
+//         ans.real = real + c2.real;
+//         ans.imaginary = imaginary + c2.imaginary;
+
+//         return ans;
+//     }
+// };
+
+// int main() {
+
+//     Complex C1(2, 5);
+//     Complex C2(3, 4);
+
+//     Complex C3 = C1 + C2;
+
+//     C3.display();
+
+//     return 0;
+// }
