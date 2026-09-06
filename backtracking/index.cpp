@@ -135,3 +135,34 @@
 
 //     return 0;
 // }
+
+// grid ways;
+
+// #include <iostream>
+// using namespace std;
+
+// int gridWays(int r, int c, int n, int m) {
+
+//     if (r == n && c == m) {
+//         return 1;
+//     }
+
+//     if (r >= n || c >= m) {
+//         return 0;
+//     }
+
+//     int val1 = gridWays(r, c + 1, n, m);
+//     int val2 = gridWays(r + 1, c, n, m);
+
+//     return val1 + val2;
+// }
+
+// int main() {
+
+//     int n = 3;
+//     int m = 3;
+
+//     cout << gridWays(0, 0, n, m) << endl;
+
+//     return 0;
+// }
