@@ -663,3 +663,39 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent {
+
+//     public: 
+//         void show() {
+//             cout << "This is Parent";
+//         }
+// };
+
+// class Child: public Parent {
+
+//     public: 
+//         void show() {
+//             cout << "This is Child";
+//         }
+
+// };
+
+// int main () {
+
+//     Parent P1;
+
+//     P1.show();
+
+//     Child C1;
+
+//     C1.show();
+
+
+//     return 0;
+
+// }
