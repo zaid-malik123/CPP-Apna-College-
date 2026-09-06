@@ -592,3 +592,31 @@
 //     return 0;
 
 // }
+
+
+// function overloading;
+// #include<iostream>
+
+// using namespace std;
+
+// class Area {
+
+//     public: 
+//         void calArea(int r) {
+//             cout << 3.14 * r * r;
+//         }
+
+//         void calArea(int l, int b) {
+//             cout << l * b;
+//         }
+// };
+
+// int main () {
+
+//     Area A1;
+
+//     A1.calArea(2, 4);
+
+//     return 0;
+
+// }
