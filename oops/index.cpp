@@ -529,3 +529,66 @@
 //     return 0;
 
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student {
+
+//     public: 
+//         void print() {
+//             cout << "I am Student";
+//         }
+// };
+
+// class Male {
+
+//     public: 
+//         void printMale() {
+//             cout << "I am Male";
+//         }
+
+// };
+
+// class Female {
+
+//     public: 
+//         void printFemale() {
+//             cout << "I am Female";
+//         }
+
+// };
+
+// class Boy: public Student, public Male {
+
+//     public: 
+//         void printBoy() {
+//             cout << "I am Boy";
+//         }
+
+// };
+
+// class Girl: public Student, public Female {
+
+//     public: 
+//         void printGirl() {
+//             cout << "I am Girl";
+//         }
+
+// };
+
+// int main () {
+
+//     Boy B1;
+
+//     Girl G1;
+
+//     B1.print();
+//     B1.printBoy();
+
+//     G1.printGirl();
+
+//     return 0;
+
+// }
