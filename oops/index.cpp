@@ -335,6 +335,9 @@
 
 // }
 
+// multilevel:- single parent class multiple derived class;
+
+
 // #include<iostream>
 
 // using namespace std;
@@ -390,4 +393,139 @@
 //     M2.myMonthlySalary();
 
 //     return 0;
+// }
+
+// multiple inheritance;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Engineer {
+
+//     public:
+//      string specialization;
+
+//     void spec() {
+//         cout << "I Have speacialization in " << specialization << endl;
+//     }
+
+
+// };
+
+// class Youtuber {
+
+//     public:
+//         int subscriberCount;
+
+//     void subs() {
+//         cout << "My Channel Subscriber Count is " << subscriberCount << endl;
+//     }
+
+// };
+
+// class Teacher: public Engineer, public Youtuber {
+
+//     public:
+//     string name;
+//     string subjectTeacher;
+
+//     Teacher(string name, string subjectTeacher, string specialization, int subsCount) {
+
+//         this->name = name;
+//         this->subjectTeacher = subjectTeacher;
+//         this->specialization = specialization;
+//         this->subscriberCount = subsCount;
+//     }
+
+//     void display () {
+        
+//         cout << "You'r name is " << name << "  and you teach the subject is " << subjectTeacher << endl;
+
+//         spec();
+
+//         subs();
+//     }
+
+
+// };
+
+// int main () {
+
+//     Teacher T1("zaid", "C++", "CSE", 40000);
+//     Teacher T2("kaif", "Physics", "Civil", 40000);
+
+//     T1.display();
+
+//     T2.display();
+
+//     return 0;
+
+// }
+
+// Hierarichal Inheritance :-  single parent class multiple child class;
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Human {
+
+//     public:
+//     string name;
+
+//     void showName() {
+//         cout << "Your name is " << name << endl;
+//     }
+// };
+
+// class Student: public Human {
+
+//     public:
+//         int rollNo;
+
+//     Student(string name, int rollNo) {
+
+//         this->name = name;
+//         this->rollNo = rollNo;
+
+//     }
+
+//     void showStudent () {
+//         cout << "Student name is " << name << "  and roll No " << rollNo << endl;
+//     }
+
+// };
+
+// class Teacher: public Human {
+
+//     public:
+//         int salary;
+    
+//     Teacher( string name, int salary) {
+
+//         this->name = name;
+//         this->salary = salary;
+
+//     }
+
+//     void showTeacher () {
+//         cout << "Teacher name is " << name << "  and salary is " << salary << endl;
+//     }
+
+// };
+
+// int main () {
+
+//     Teacher T1("zaid", 12000);
+
+//     Student S1("kaif", 23);
+
+//     T1.showTeacher();
+
+//     S1.showStudent();
+
+//     return 0;
+
 // }
