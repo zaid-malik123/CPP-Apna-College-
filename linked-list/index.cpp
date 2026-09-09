@@ -68,3 +68,71 @@
     
 //     return 0;
 // }
+
+// Revision Linked List Start Inserting & Traversing;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node {
+
+//     public:
+//         int data;
+
+//         Node *next;
+
+//         Node( int v ) { 
+
+//             data = v;
+//             next = NULL;
+//         } 
+// };
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3, 4 };
+
+//     Node *Head;
+
+//     Head = NULL;
+
+//     for ( int i = 0; i < 4; i++ ) {
+
+//         if( Head == NULL ) {
+
+//             Head = new Node(arr[i]);
+
+//         }
+
+//         else {
+
+//            Node *temp;
+
+//            temp = new Node(arr[i]);
+
+//            temp->next = Head;
+
+//            Head = temp;
+
+//         }
+//     }
+
+//     Node *temp = Head;
+
+//     while (temp)
+
+//     {
+//         /* code */
+
+//         cout << temp->data << " ";
+
+//         temp = temp->next;
+
+//     }
+    
+//     cout << endl;
+
+//     return 0;
+
+// }
