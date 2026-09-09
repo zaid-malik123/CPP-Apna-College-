@@ -1,6 +1,5 @@
 // Linked List ek linear data structure hai jisme elements (nodes) memory me contiguous nahi hote, aur har node next node ka address/reference store karta hai.
 
-
 // Linked List creation and Traversing;
 
 // #include<iostream>
@@ -22,7 +21,6 @@
 
 // };
 
-
 // int main() {
 
 //     Node *Head;
@@ -37,7 +35,6 @@
 
 //             Head = new Node(arr[i]);
 
-
 //         }
 
 //         else {
@@ -49,12 +46,12 @@
 //             temp->next = Head;
 
 //             Head = temp;
-            
+
 //         }
 //     }
 
 //     Node *temp = Head;
-    
+
 //     while (temp)
 //     {
 //         /* code */
@@ -65,7 +62,7 @@
 //     }
 
 //     cout << endl;
-    
+
 //     return 0;
 // }
 
@@ -82,11 +79,11 @@
 
 //         Node *next;
 
-//         Node( int v ) { 
+//         Node( int v ) {
 
 //             data = v;
 //             next = NULL;
-//         } 
+//         }
 // };
 
 // int main () {
@@ -130,9 +127,74 @@
 //         temp = temp->next;
 
 //     }
-    
+
 //     cout << endl;
 
 //     return 0;
 
+// }
+
+// add element in last;
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Node
+// {
+// public:
+//     int data;
+
+//     Node *next;
+
+//     Node(int v)
+//     {
+
+//         data = v;
+
+//         next = NULL;
+//     }
+// };
+
+// int main()
+// {
+
+//     Node *Head = NULL;
+//     Node *Tail = NULL;
+
+//     int arr[] = {1, 2, 3, 4};
+
+//     for (int i = 0; i < 4; i++)
+//     {
+
+//         if (Head == NULL)
+//         {
+
+//             Head = new Node(arr[i]);
+//             Tail = Head;
+//         }
+
+//         else
+//         {
+
+//             Tail->next = new Node(arr[i]);
+//             Tail = Tail->next ;
+
+//         }
+//     }
+
+//     Node *temp = Head;
+
+//     while (temp)
+//     {
+//         /* code */
+
+//         cout << temp->data << " ";
+//         temp = temp->next;
+
+//     }
+    
+//     cout << endl;
+
+//     return 0;
 // }
