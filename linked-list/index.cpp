@@ -193,8 +193,62 @@
 //         temp = temp->next;
 
 //     }
-    
+
 //     cout << endl;
+
+//     return 0;
+// }
+
+// Add Node at end Using Recursion;
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Node
+// {
+// public:
+//     int data;
+
+//     Node *next;
+
+//     Node(int v)
+//     {
+
+//         data = v;
+
+//         next = NULL;
+//     }
+// };
+
+// Node * CreateLL(int arr[], int i, int n)
+// {
+
+//     if (i == n)
+//     {
+
+//         return NULL;
+//     }
+
+//     Node *temp;
+
+//     temp = new Node(arr[i]);
+
+//     temp->next = CreateLL(arr, i+1, n);
+
+//     return temp;
+// }
+
+// int main()
+// {
+
+//     int arr[] = {1, 2, 3, 4};
+
+//     int n = 4;
+
+//     int i = 0;
+
+//     CreateLL(arr, i, n);
 
 //     return 0;
 // }
