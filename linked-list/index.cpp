@@ -252,3 +252,49 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node
+// {
+// public:
+//     int data;
+
+//     Node *next;
+
+//     Node(int v)
+//     {
+
+//         data = v;
+
+//         next = NULL;
+//     }
+// };
+
+// Node * createLL( int arr[], int i, int n, Node *prev ) {
+
+//     if( i == n ) {
+
+//         return prev;
+
+//     }
+
+//     Node * temp;
+
+//     temp = new Node(arr[i]);
+
+//     temp->next = prev;
+
+//     return (arr, i+1, n, temp);
+
+// };
+
+// int main () {
+
+
+
+//     return 0;
+
+// }
