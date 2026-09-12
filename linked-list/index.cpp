@@ -298,3 +298,117 @@
 //     return 0;
 
 // }
+
+// #include <iostream>
+
+// using namespace std;
+
+// class Node {
+// public:
+//     int data;
+//     Node* next;
+
+//     Node(int val) {
+//         data = val;
+//         next = NULL;
+//     }
+// };
+
+// void insertAtNodeInLL(int data, Node*& Head) {
+
+//     Node* temp = new Node(data);
+
+//     if (Head == NULL) {
+//         Head = temp;
+//         return;
+//     }
+
+//     Head->next = temp;
+//     Head = temp;
+// }
+
+// void printLL(Node*& Head) {
+
+//     Node* temp = Head;
+
+//     while (temp) {
+//         cout << temp->data << " ";
+//         temp = temp->next;
+//     }
+// }
+
+// int main() {
+
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int n = 5;
+
+//     Node* Head = NULL;
+
+//     for (int i = 0; i < n; i++) {
+//         insertAtNodeInLL(arr[i], Head);
+//     }
+
+//     printLL(Head);
+
+//     return 0;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node {
+// public:
+//     int data;
+//     Node* next;
+
+//     Node(int val) {
+//         data = val;
+//         next = NULL;
+//     }
+// };
+
+// void InsertAtTail( int data, Node *Tail) {
+
+//     Node *temp;
+
+//     temp = new Node(data);
+
+//     Tail->next = temp;
+
+//     Tail = temp;
+
+// }
+
+// void printLL(Node*& Head) {
+
+//     Node* temp = Head;
+
+//     while (temp) {
+//         cout << temp->data << " ";
+//         temp = temp->next;
+//     }
+// }
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3, 4, 5 };
+
+//     int n = 5;
+
+//     Node *Head = NULL;
+
+//     Node * Tail = Head;
+
+//     for ( int i = 0; i < n; i++ ) {
+
+//         InsertAtTail(arr[i], Tail);
+
+//     }
+
+//     printLL(Head);
+
+
+//     return 0;
+
+// }
