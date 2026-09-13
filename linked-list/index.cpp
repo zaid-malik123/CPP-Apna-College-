@@ -678,3 +678,93 @@
 //     return 0;
 
 // }
+
+// insert at particular position;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node {
+
+//     public:
+
+//         int data;
+
+//         Node *next;
+
+//         Node( int val ) {
+
+//             data = val;
+//             next = NULL;
+
+//         }
+// };
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3, 4, 5 };
+//     int n = 5;
+
+//     Node *Head = NULL;
+
+//     Node *Tail = NULL;
+
+//     for ( int i = 0; i < n; i++ ) {
+
+//         if( Head == NULL ) {
+
+//             Head = new Node(arr[i]);
+
+//             Tail = Head;
+
+//         }
+
+//         else {
+
+//             Tail->next = new Node(arr[i]);
+
+//             Tail = Tail->next;
+
+//         }
+//     }
+
+    
+//     int x = 2;
+
+//     int val = 8;
+
+//     Node * posAdd = Head;
+
+//     x--;
+
+//     while (x)
+//     {
+//         /* code */
+//         posAdd = posAdd->next;
+//         x--;
+
+//     }
+
+//     Node *posAddTemp = new Node(val);
+
+//     posAddTemp->next = posAdd->next;
+//     posAdd->next = posAddTemp;
+    
+//     Node *temp = Head;
+
+//     while (temp)
+//     {
+//         /* code */
+
+//         cout << temp->data << " ";
+
+//         temp = temp->next;
+
+//     }
+
+//     cout << endl;
+    
+//     return 0;
+
+// }
