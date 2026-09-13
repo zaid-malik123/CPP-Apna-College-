@@ -548,3 +548,69 @@
 // }
 
 
+// inserting at the end using recursion;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node {
+
+//     public:
+
+//         int data;
+
+//         Node *next;
+
+//         Node( int val ) {
+
+//             data = val;
+//             next = NULL;
+
+//         }
+// };
+
+// Node * LinkedList( int arr[], int n, int i ) {
+
+//     if( i == n ) {
+
+//         return NULL;
+
+//     }
+
+//     Node *temp;
+
+//     temp = new Node(arr[i]);
+
+//     temp->next = LinkedList(arr, n, i+1);
+
+//     return temp;
+
+// };
+
+// void printLL(Node*& Head) {
+
+//     Node* temp = Head;
+
+//     while (temp) {
+//         cout << temp->data << " ";
+//         temp = temp->next;
+//     }
+// }
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3, 4, 5,6,7};
+
+//     int n = 7;
+
+//     Node *Head = NULL;
+
+//     Head = LinkedList (arr, n, 0);
+
+//     printLL(Head);
+
+//     cout << endl;
+
+//     return 0;
+// }
