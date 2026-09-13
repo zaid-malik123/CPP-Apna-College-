@@ -598,6 +598,7 @@
 //     }
 // }
 
+
 // int main () {
 
 //     int arr[] = { 1, 2, 3, 4, 5,6,7};
@@ -613,4 +614,67 @@
 //     cout << endl;
 
 //     return 0;
+// }
+
+// insert at the begining at the start using recursion;
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Node {
+
+//     public:
+//         int data;
+//         Node *next;
+
+//         Node( int data ) {
+//             this->data = data;
+//             next = NULL;
+//         }
+// };
+
+// Node * createLL( int arr[], int n, int i, Node *add ) {
+
+//     if( i == n ) {
+
+//         return add;
+
+//     }
+
+//     Node *temp;
+//     temp = new Node(arr[i]);
+
+//     temp->next = add;
+
+//     return createLL(arr, n, i+1, temp);
+
+// };
+
+// void printLL(Node*& Head) {
+
+//     Node* temp = Head;
+
+//     while (temp) {
+//         cout << temp->data << " ";
+//         temp = temp->next;
+//     }
+// }
+
+// int main () {
+
+//     int arr[] = { 1, 2, 3, 4, 5 };
+
+//     int n = 5;
+
+//     Node *Head = NULL;
+
+//     Head = createLL(arr, n, 0, NULL );
+
+//     printLL(Head);
+
+//     cout << endl;
+
+//     return 0;
+
 // }
