@@ -768,3 +768,78 @@
 //     return 0;
 
 // }
+
+// lecture 2 Linked List;
+
+#include<iostream>
+
+using namespace std;
+
+class Node {
+
+    public:
+
+        int data;
+
+        Node *next;
+
+        Node( int val ) {
+
+            data = val;
+            next = NULL;
+
+        }
+};
+
+void printLL(Node*& Head) {
+
+    Node* temp = Head;
+
+    while (temp) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+}
+
+
+int main () {
+
+    int arr[] = { 1, 2, 3, 4, 5 };
+
+    int n = 5;
+
+    Node *Head = NULL;
+
+    for ( int i = 0; i < n; i++ ) {
+
+        if( Head == NULL ) {
+
+            Head = new Node(arr[i]);
+
+        }
+
+        else {
+
+            Node *temp;
+
+            temp = new Node(arr[i]);
+
+            temp->next = Head;
+
+            Head = temp;
+            
+        }
+    }
+
+    // delete the first node;
+
+    Node * temp = Head;
+
+    Head = Head->next;
+
+    delete temp;
+
+    printLL(Head);
+
+    return 0;
+}
