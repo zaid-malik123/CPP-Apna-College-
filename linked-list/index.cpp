@@ -293,8 +293,6 @@
 
 // int main () {
 
-
-
 //     return 0;
 
 // }
@@ -408,7 +406,6 @@
 
 //     printLL(Head);
 
-
 //     return 0;
 
 // }
@@ -458,7 +455,7 @@
 //             temp->next = Head;
 
 //             Head = temp;
-            
+
 //         }
 //     }
 
@@ -473,7 +470,7 @@
 //         temp = temp->next;
 
 //     }
-    
+
 //     cout << endl;
 
 //     return 0;
@@ -539,14 +536,12 @@
 //         temp = temp->next;
 
 //     }
-    
 
 //     cout << endl;
-    
+
 //     return 0;
 
 // }
-
 
 // inserting at the end using recursion;
 
@@ -597,7 +592,6 @@
 //         temp = temp->next;
 //     }
 // }
-
 
 // int main () {
 
@@ -729,7 +723,6 @@
 //         }
 //     }
 
-    
 //     int x = 2;
 
 //     int val = 8;
@@ -750,7 +743,7 @@
 
 //     posAddTemp->next = posAdd->next;
 //     posAdd->next = posAddTemp;
-    
+
 //     Node *temp = Head;
 
 //     while (temp)
@@ -764,61 +757,65 @@
 //     }
 
 //     cout << endl;
-    
+
 //     return 0;
 
 // }
 
 // lecture 2 Linked List;
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-class Node {
+class Node
+{
 
-    public:
+public:
+    int data;
 
-        int data;
+    Node *next;
 
-        Node *next;
+    Node(int val)
+    {
 
-        Node( int val ) {
-
-            data = val;
-            next = NULL;
-
-        }
+        data = val;
+        next = NULL;
+    }
 };
 
-void printLL(Node*& Head) {
+void printLL(Node *&Head)
+{
 
-    Node* temp = Head;
+    Node *temp = Head;
 
-    while (temp) {
+    while (temp)
+    {
         cout << temp->data << " ";
         temp = temp->next;
     }
 }
 
+int main()
+{
 
-int main () {
-
-    int arr[] = { 1, 2, 3, 4, 5 };
+    int arr[] = {1, 2, 3, 4, 5};
 
     int n = 5;
 
     Node *Head = NULL;
 
-    for ( int i = 0; i < n; i++ ) {
+    for (int i = 0; i < n; i++)
+    {
 
-        if( Head == NULL ) {
+        if (Head == NULL)
+        {
 
             Head = new Node(arr[i]);
-
         }
 
-        else {
+        else
+        {
 
             Node *temp;
 
@@ -827,17 +824,62 @@ int main () {
             temp->next = Head;
 
             Head = temp;
-            
         }
     }
 
     // delete the first node;
 
-    Node * temp = Head;
+    // if (Head != NULL)
+    // {
 
-    Head = Head->next;
+    //     Node *temp = Head;
 
-    delete temp;
+    //     Head = Head->next;
+
+    //     delete temp;
+    // }
+
+    // delete the last Node;
+
+    if ( Head != NULL ) {
+
+        // if single node exist;
+
+        if ( Head->next == NULL ) {
+
+            Node *temp = Head;
+
+            delete temp;
+
+            Head = NULL;
+
+        }
+
+        // else multiple Node exist;
+        else {
+
+            Node *curr = Head;
+
+            Node *prev = NULL;
+
+            while (curr->next != NULL)
+            {
+                /* code */
+
+                prev = curr;
+
+                curr = curr->next;
+
+            }
+
+            delete curr;
+
+            prev->next = NULL;
+            
+
+        }
+    }
+
 
     printLL(Head);
 
