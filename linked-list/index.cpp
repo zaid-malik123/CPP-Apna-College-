@@ -841,45 +841,79 @@ int main()
 
     // delete the last Node;
 
-    if ( Head != NULL ) {
+    // if ( Head != NULL ) {
 
-        // if single node exist;
+    //     // if single node exist;
 
-        if ( Head->next == NULL ) {
+    //     if ( Head->next == NULL ) {
 
-            Node *temp = Head;
+    //         Node *temp = Head;
 
-            delete temp;
+    //         delete temp;
 
-            Head = NULL;
+    //         Head = NULL;
 
-        }
+    //     }
 
-        // else multiple Node exist;
-        else {
+    //     // else multiple Node exist;
+    //     else {
 
-            Node *curr = Head;
+    //         Node *curr = Head;
 
-            Node *prev = NULL;
+    //         Node *prev = NULL;
 
-            while (curr->next != NULL)
-            {
-                /* code */
+    //         while (curr->next != NULL)
+    //         {
+    //             /* code */
 
-                prev = curr;
+    //             prev = curr;
 
-                curr = curr->next;
+    //             curr = curr->next;
 
-            }
+    //         }
 
-            delete curr;
+    //         delete curr;
 
-            prev->next = NULL;
+    //         prev->next = NULL;
             
 
-        }
+    //     }
+    // }
+
+    // delete at the particular node;
+
+    int x = 3;
+
+    x--;
+
+    Node *curr = Head;
+
+    Node *prev = NULL;
+
+    if ( x == 1 ) {
+
+        Node *temp = Head;
+
+        Head = Head->next;
+
+        delete temp;
+
     }
 
+    while (x--)
+    {
+        /* code */
+
+        prev = curr;
+
+        curr = curr->next;
+
+    }
+
+    prev->next = curr->next;
+
+    delete curr;
+    
 
     printLL(Head);
 
