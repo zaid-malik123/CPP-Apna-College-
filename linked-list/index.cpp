@@ -882,40 +882,40 @@ int main()
 
     // delete at the particular node;
 
-    int x = 3;
+//     int x = 3;
 
-    x--;
+//     x--;
 
-    Node *curr = Head;
+//     Node *curr = Head;
 
-    Node *prev = NULL;
+//     Node *prev = NULL;
 
-    if ( x == 1 ) {
+//     if ( x == 1 ) {
 
-        Node *temp = Head;
+//         Node *temp = Head;
 
-        Head = Head->next;
+//         Head = Head->next;
 
-        delete temp;
+//         delete temp;
 
-    }
+//     }
 
-    while (x--)
-    {
-        /* code */
+//     while (x--)
+//     {
+//         /* code */
 
-        prev = curr;
+//         prev = curr;
 
-        curr = curr->next;
+//         curr = curr->next;
 
-    }
+//     }
 
-    prev->next = curr->next;
+//     prev->next = curr->next;
 
-    delete curr;
+//     delete curr;
     
 
-    printLL(Head);
+//     printLL(Head);
 
-    return 0;
-}
+//     return 0;
+// }
